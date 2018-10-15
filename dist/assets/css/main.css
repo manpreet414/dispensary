@@ -3526,7 +3526,7 @@ span.round {
 		    margin: 13px 0;
 		}
 		ul.hours-oper>li {
-		    margin: 8px 0;
+		    margin: -11px 0;
 		    padding: 0;
 		    list-style: none;
 		}
@@ -3540,7 +3540,7 @@ span.round {
 		    font-weight: 600;
 		}
 		ul.hours-oper>li>span:nth-child(2) {
-		    width: 50%;
+		    width: 100%;
 		}
 		span.pm {
 		    width: 7% !important;
