@@ -3508,3 +3508,57 @@ span.round {
 	right: 14px !important;
 	left: auto!important;
 }
+
+
+/*vikas*/
+
+.wht-bg {
+		    background: #fff;
+		    border: 1px solid #fff;
+		    padding: 2% 3%;
+		}
+		h4.rit-main-title {
+		    color: #3db370;
+		    font-size: 16px;
+		    font-weight: 600;
+		}
+		ul.hours-oper {
+		    margin: 13px 0;
+		}
+		ul.hours-oper>li {
+		    margin: 8px 0;
+		    padding: 0;
+		    list-style: none;
+		}
+		ul.hours-oper>li>span:first-child, 
+		ul.hours-oper>li>span:nth-child(2), 
+		ul.hours-oper>li>span:nth-child(3), 
+		ul.hours-oper>li>span:last-child {
+		    width: 13%;
+		    display: inline-block;
+		    font-size: 14px;
+		    font-weight: 600;
+		}
+		ul.hours-oper>li>span:nth-child(2) {
+		    width: 50%;
+		}
+		span.pm {
+		    width: 7% !important;
+		    margin-left: -13px;
+		    color: #333 !important;
+		}
+		ul.hours-oper>li>span:last-child(3){
+
+		}
+		ul.hours-oper>li>span:last-child {
+		    font-size: 15px;
+		    width: 29%;
+		    color: #3db370;
+		}
+		span.time input.form-control {
+		    display: inline-block;
+		    width: 36%;
+		    margin: 0 5px;
+		    padding: 2px;
+		    border-radius: 0;
+		}
