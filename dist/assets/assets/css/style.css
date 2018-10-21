@@ -1498,25 +1498,34 @@ h4.accordion-tit {
     color: #000;
     margin: 0 0 25px 0;
 }
+ul.hours-oper {
+    margin: 15px 0;
+    padding: 0;
+}
+ul.hours-oper>li {    
+margin: 7px 0;
+}
+ul.hours-oper>li input.form-control {   
+     width: 78px;    
+     margin: 0 5px;
+}
 ul.hours-oper>li>span:first-child, 
 ul.hours-oper>li>span:nth-child(2), 
 ul.hours-oper>li>span:nth-child(3) {
-    width: 13%;
+    width: 85px;
     display: inline-block;
     font-size: 14px;
     font-weight: 600;
 }
 ul.hours-oper>li>span:nth-child(2) {
-    width: 30%;
+    width: 225px;
 }
 ul.hours-oper>li>span:nth-child(3){
      font-size: 15px;
      width: 30%;
      color: #3db370;
 }
-ul.hours-oper {
-    margin: 13px 0;
-}
+
 .review-tab-right p.month-view {
     color: #b9b9b9;
     font-size: 12px;
@@ -1869,8 +1878,5 @@ ul.hours-oper {
 margin: 13px 0;    
 padding: 0;
 }
-ul.hours-oper>li {    
-margin: 7px 0;
-}
 
-ul.hours-oper>li input.form-control {    width: 34%;    margin: 0 5px;}
+
