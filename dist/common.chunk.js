@@ -147,7 +147,7 @@ var SharedService = /** @class */ (function () {
         // window.scrollTo(0, 0);
         var obj = {
             classes: ['alert', alertClass],
-            timeout: 3000
+            timeout: 1500
         };
         this._flashMessagesService.show(message, obj);
     };
