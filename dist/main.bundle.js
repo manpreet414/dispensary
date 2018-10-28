@@ -212,7 +212,8 @@ var environment = {
     config: {
         APP_NAME: "instaLeaf",
         BASE_URL: "http://18.222.19.50:1337/",
-        API_URL: "http://18.222.19.50:1337/api/"
+        API_URL: "http://18.222.19.50:1337/api/",
+        GOOGLE_DISTANCE_API_KEY: "AIzaSyB84_b3sz-C67ERkmEnQXAu_EglmB-AG1g"
     },
     api_routes: {
         LOGIN: 'login',

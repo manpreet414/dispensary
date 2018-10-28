@@ -657,7 +657,7 @@ var MyMenuComponent = /** @class */ (function () {
         });
         var data = { data: arrayObj };
         this._sharedService.loader('show');
-        this._sharedService.post(data, 'addUserItemProduct').then(function (res) {
+        this._sharedService.post(data, 'add_item_product').then(function (res) {
             _this._sharedService.loader('hide');
             if (res.success) {
                 _this._router.navigate(['item-dashboard/my-menu']);

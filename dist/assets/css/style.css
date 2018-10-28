@@ -243,10 +243,10 @@ span.ban-ser-icon>img.img-responsive {
 	font-weight: 600;
 }
 .search-container button.cus-btn {
-        height: 50px;
+    height: 49px;
     text-align: center;
     border-radius: 0;
-    margin: 0;
+    margin: 1px 0 0 0;
     vertical-align: top;
     text-transform: uppercase;
     font-weight: 500;
@@ -408,9 +408,9 @@ span.rating {
 .mob-app h2 {
     color: #fff;
     text-transform: capitalize;
-    font-size: 6rem;
+    font-size: 5.5rem;
     font-weight: 400;
-    margin-top: 7   0px;
+    margin-top: 70px;
 }
 .app-btn>a{
     display: inline-block;
@@ -735,7 +735,7 @@ h3.dis-dash-title {
     line-height: 42px;
 }
 .inn-container textarea.text-form-control {
-    min-height: 115px;
+    min-height: 155px;
     resize: none;
 }
 input.logo-file-input, 
@@ -1478,15 +1478,23 @@ ul.hours-oper>li>span:nth-child(3) {
     font-weight: 600;
 }
 ul.hours-oper>li>span:nth-child(2) {
-    width:112px;
+    width:202px;
 }
 ul.hours-oper>li>span:nth-child(3){
      font-size: 15px;
      width: 30%;
      color: #3db370;
 }
+ul.hours-oper>li>span:nth-child(2)>.form-control {
+    display: inline-block;
+    width: 80px;
+    margin: 0 1px;
+}
 ul.hours-oper {
     margin: 13px 0;
+}
+ul.hours-oper>li{
+    margin: 6px 0;
 }
 .review-tab-right p.month-view {
     color: #b9b9b9;
@@ -2145,7 +2153,10 @@ p.str-pro-rat>span {
 @media (min-width:768px){}
 @media (max-width:1390px){
     .map-loction {
-        width: 54.6%;
+        width: 64.6%;
+    }
+    .slide-open .map-loction {
+        width: 99.6%;
     }
     .aside-inner>ul {
         margin: 0 -6px 0 0;
