@@ -137,6 +137,13 @@ var SharedService = /** @class */ (function () {
         }
         return headers;
     };
+    SharedService.prototype.isLogin = function () {
+        var token = this._cookieService.get('token');
+        if (token)
+            return true;
+        else
+            return false;
+    };
     SharedService.prototype.loader = function (key) {
         if (key == 'show')
             this.spinner.show();
