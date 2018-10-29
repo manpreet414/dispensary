@@ -182,22 +182,27 @@ var ItemDetailComponent = /** @class */ (function () {
     };
     ItemDetailComponent.prototype.save = function () {
         var _this = this;
-        this._sharedService.loader('show');
-        this._sharedService.post(this.review, 'reviews').then(function (res) {
-            _this._sharedService.loader('hide');
-            if (res.success) {
-                _this.review = {
-                    item_id: _this.object['id'],
-                    type: 'dispensary',
-                    rating: null,
-                    detail: ''
-                };
-                _this._sharedService.showAlert('Review Added Succefully.', 'alert-success');
-            }
-            else {
-                _this._sharedService.showAlert(res.error.message, 'alert-danger');
-            }
-        }, function (error) { });
+        if (this._sharedService.isLogin()) {
+            this._sharedService.loader('show');
+            this._sharedService.post(this.review, 'reviews').then(function (res) {
+                _this._sharedService.loader('hide');
+                if (res.success) {
+                    _this.review = {
+                        item_id: _this.object['id'],
+                        type: 'dispensary',
+                        rating: null,
+                        detail: ''
+                    };
+                    _this._sharedService.showAlert('Review Added Succefully.', 'alert-success');
+                }
+                else {
+                    _this._sharedService.showAlert(res.error.message, 'alert-danger');
+                }
+            }, function (error) { });
+        }
+        else {
+            this._sharedService.showAlert("Please Login to write a review.", 'alert-danger');
+        }
     };
     ItemDetailComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
