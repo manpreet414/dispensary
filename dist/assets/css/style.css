@@ -261,6 +261,8 @@ span.ban-ser-icon>img.img-responsive {
 section.featured-disp a {
     color: #656565;
     text-decoration: none;
+        margin-bottom: 20px;
+    display: block;
 }
 .featured-disp .wrap,
 .featured-brands .wrap{
@@ -268,10 +270,17 @@ section.featured-disp a {
     background: #fff;
     border-radius: 5px;
 }
-.featured-disp .wrap>.top-sec>img {
+.featured-disp .wrap>.top-sec>.pro-thumbnail {
     width: 85px;
     position: absolute;
     bottom: -30px;
+    height: 85px;
+    border-radius: 100px;
+    overflow: hidden;
+}
+.featured-disp .wrap>.top-sec>.pro-thumbnail>img {
+    width: 100%;
+    height: 100%;
 }
 span.loc-track {
     width: 35px;
