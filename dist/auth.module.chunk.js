@@ -171,6 +171,7 @@ var LoginSignupComponent = /** @class */ (function () {
                 var route = '/item-dashboard';
                 _this._cookieService.put('token', res.data.access_token);
                 _this._cookieService.put('roles', res.data.roles);
+                _this._cookieService.put('loginID', res.data.id);
                 _this._cookieService.putObject('user', res.data);
                 if (res.data.roles == 'U')
                     route = '/dashboard';
@@ -181,8 +182,7 @@ var LoginSignupComponent = /** @class */ (function () {
                 _this.errLogin = true;
             }
         }, function (error) {
-            _this._cookieService.put('token', 'token');
-            _this._cookieService.putObject('actions', { 'actions': 'A' });
+            _this._sharedService.showAlert("There are some error please try after some time.", 'alert-success');
         });
     };
     LoginSignupComponent.prototype.registerUser = function () {

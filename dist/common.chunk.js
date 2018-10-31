@@ -65,17 +65,22 @@ var SharedService = /** @class */ (function () {
         return this.http.post(this.rootUrl + path, body, { headers: headers })
             .toPromise().then(function (response) { return response.json(); });
     };
+    SharedService.prototype.put = function (body, path) {
+        var headers = this.getAuthorizationHeader();
+        return this.http.put(this.rootUrl + path, body, { headers: headers })
+            .toPromise().then(function (response) { return response.json(); });
+    };
+    SharedService.prototype.remove = function (id) {
+        var headers = this.getAuthorizationHeader();
+        return this.http.delete(this.rootUrl + 'delete?id=' + id + '&model=itemproduct', { headers: headers })
+            .toPromise().then(function (response) { return response.json(); });
+    };
     SharedService.prototype.login = function (body) {
         return this.http.post(this.rootUrl + 'signinUser', body)
             .toPromise().then(function (response) { return response.json(); });
     };
     SharedService.prototype.register = function (body) {
         return this.http.post(this.rootUrl + 'register', body)
-            .toPromise().then(function (response) { return response.json(); });
-    };
-    SharedService.prototype.put = function (body, path) {
-        var headers = this.getAuthorizationHeader();
-        return this.http.put(this.rootUrl + path, body, { headers: headers })
             .toPromise().then(function (response) { return response.json(); });
     };
     SharedService.prototype.myDispensary = function (search, page, count) {
@@ -144,6 +149,9 @@ var SharedService = /** @class */ (function () {
         else
             return false;
     };
+    SharedService.prototype.loginID = function () {
+        return this._cookieService.get('loginID');
+    };
     SharedService.prototype.loader = function (key) {
         if (key == 'show')
             this.spinner.show();
@@ -154,7 +162,7 @@ var SharedService = /** @class */ (function () {
         // window.scrollTo(0, 0);
         var obj = {
             classes: ['alert', alertClass],
-            timeout: 1500
+            timeout: 1800
         };
         this._flashMessagesService.show(message, obj);
     };
