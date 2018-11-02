@@ -243,7 +243,7 @@ var ItemDetailComponent = /** @class */ (function () {
         var _this = this;
         this._sharedService.loader('show');
         var obj = {
-            product_id: this.productObj['id'],
+            product_id: this.productObj['product_id'],
             type: 'product'
         };
         this._sharedService.post(obj, 'favourite').then(function (res) {
@@ -276,6 +276,8 @@ var ItemDetailComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__item_detail_item_detail_component__ = __webpack_require__("../../../../../src/app/pages/item-detail/item-detail.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__view_items_view_items_component__ = __webpack_require__("../../../../../src/app/pages/view-items/view-items.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__search_search_component__ = __webpack_require__("../../../../../src/app/pages/search/search.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__products_products_component__ = __webpack_require__("../../../../../src/app/pages/products/products.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -286,12 +288,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
+
 var routes = [{
         path: 'item-detail/:id',
         component: __WEBPACK_IMPORTED_MODULE_2__item_detail_item_detail_component__["a" /* ItemDetailComponent */]
     }, {
         path: 'view-items/:id',
         component: __WEBPACK_IMPORTED_MODULE_3__view_items_view_items_component__["a" /* ViewItemsComponent */]
+    }, {
+        path: 'search',
+        component: __WEBPACK_IMPORTED_MODULE_4__search_search_component__["a" /* SearchComponent */]
+    }, {
+        path: 'products',
+        component: __WEBPACK_IMPORTED_MODULE_5__products_products_component__["a" /* ProductsComponent */]
     }];
 var PagesRoutingModule = /** @class */ (function () {
     function PagesRoutingModule() {
@@ -324,12 +334,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_routing_module__ = __webpack_require__("../../../../../src/app/pages/pages-routing.module.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__item_detail_item_detail_component__ = __webpack_require__("../../../../../src/app/pages/item-detail/item-detail.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__view_items_view_items_component__ = __webpack_require__("../../../../../src/app/pages/view-items/view-items.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__search_search_component__ = __webpack_require__("../../../../../src/app/pages/search/search.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__products_products_component__ = __webpack_require__("../../../../../src/app/pages/products/products.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -350,10 +364,175 @@ var PagesModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_4_ngx_spinner__["NgxSpinnerModule"],
                 __WEBPACK_IMPORTED_MODULE_5__pages_routing_module__["a" /* PagesRoutingModule */]
             ],
-            declarations: [__WEBPACK_IMPORTED_MODULE_6__item_detail_item_detail_component__["a" /* ItemDetailComponent */], __WEBPACK_IMPORTED_MODULE_7__view_items_view_items_component__["a" /* ViewItemsComponent */]]
+            declarations: [__WEBPACK_IMPORTED_MODULE_6__item_detail_item_detail_component__["a" /* ItemDetailComponent */], __WEBPACK_IMPORTED_MODULE_7__view_items_view_items_component__["a" /* ViewItemsComponent */], __WEBPACK_IMPORTED_MODULE_8__search_search_component__["a" /* SearchComponent */], __WEBPACK_IMPORTED_MODULE_9__products_products_component__["a" /* ProductsComponent */]]
         })
     ], PagesModule);
     return PagesModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/products/products.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/products/products.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "\n<div class=\"spc-top\"></div>\n<!-- This is a Dispensaries -->\n<section class=\"prod-page-sec\">\n\t<div class=\"container-flude\">\n\t\t<div class=\"row m-0\">\n\t\t\t<div class=\"col-sm-12\">\n\t\t\t\t<div class=\"dispen-dashboard-nav dispen-dashboard-nav-top\">\n\t\t\t\t\t<div class=\"filter-section-one filter-sec\">\n\t\t\t\t\t\t<h4>TYPE</h4>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li><span class=\"input-single\"><input type=\"checkbox\"><label for=\"\"><img src=\"assets/img/pat-icon.png\" alt=\"\"> Sativa </label></span></li>\n\t\t\t\t\t\t\t<li><span class=\"input-single\"><input type=\"checkbox\"><label for=\"\"><img src=\"assets/img/pat-icon.png\" alt=\"\"> Indica </label></span></li>\n\t\t\t\t\t\t\t<li><span class=\"input-single\"><input type=\"checkbox\"><label for=\"\"><img src=\"assets/img/pat-icon.png\" alt=\"\"> Hybrid </label></span></li>\n\t\t\t\t\t\t\t<li><span class=\"input-single\"><input type=\"checkbox\"><label for=\"\"><img src=\"assets/img/pat-icon.png\" alt=\"\"> Oils </label></span></li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"filter-section-two filter-sec\">\n\t\t\t\t\t\t<h4>BRANDS</h4>\n\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t<select class=\"form-control\">\n\t\t\t\t\t\t\t\t<option>SELECT..</option>\n\t\t\t\t\t\t\t\t<option>1</option>\n\t\t\t\t\t\t\t\t<option>1</option>\n\t\t\t\t\t\t\t\t<option>1</option>\n\t\t\t\t\t\t\t\t<option>1</option>\n\t\t\t\t\t\t\t</select>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"filter-section-three filter-sec\">\n\t\t\t\t\t\t<h4>RATING</h4>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<span class=\"input-single\">\n\t\t\t\t\t\t\t\t\t<input type=\"checkbox\">\n\t\t\t\t\t\t\t\t\t<label for=\"\">\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i> \n\t\t\t\t\t\t\t\t\t</label>\n\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<span class=\"input-single\">\n\t\t\t\t\t\t\t\t\t<input type=\"checkbox\">\n\t\t\t\t\t\t\t\t\t<label for=\"\">\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star-o\" aria-hidden=\"true\"></i>\n\t\t\t\t\t\t\t\t\t</label>\n\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<span class=\"input-single\">\n\t\t\t\t\t\t\t\t\t<input type=\"checkbox\">\n\t\t\t\t\t\t\t\t\t<label for=\"\">\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star-o\" aria-hidden=\"true\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star-o\" aria-hidden=\"true\"></i>\n\t\t\t\t\t\t\t\t\t</label>\n\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<span class=\"input-single\">\n\t\t\t\t\t\t\t\t\t<input type=\"checkbox\">\n\t\t\t\t\t\t\t\t\t<label for=\"\">\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star-o\" aria-hidden=\"true\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star-o\" aria-hidden=\"true\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star-o\" aria-hidden=\"true\"></i>\n\t\t\t\t\t\t\t\t\t</label>\n\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<span class=\"input-single\">\n\t\t\t\t\t\t\t\t\t<input type=\"checkbox\">\n\t\t\t\t\t\t\t\t\t<label for=\"\">\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star-o\" aria-hidden=\"true\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star-o\" aria-hidden=\"true\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star-o\" aria-hidden=\"true\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star-o\" aria-hidden=\"true\"></i>\n\t\t\t\t\t\t\t\t\t</label>\n\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t</div>\n\n\t\t\t\t\t<div class=\"filter-section-for text-center\">\n\t\t\t\t\t\t  <p>Clear all filters</p>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"tab-content-wrapper clearfix\">\n\t\t\t\t\t<div class=\"col-sm-6\">\n\t\t\t\t\t\t<h1 class=\"text-right\">Products</h1>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"col-sm-6\">\n\t\t\t\t\t\t<div class=\"form-group fil-ser-list\">\n\t\t\t\t\t\t\t<label>SORT BY</label>\n\t\t\t\t\t\t\t<select class=\"form-control\">\n\t\t\t\t\t\t\t\t<option>MOST POPULER</option>\n\t\t\t\t\t\t\t\t<option>MOST POPULER</option>\n\t\t\t\t\t\t\t\t<option>MOST POPULER</option>\n\t\t\t\t\t\t\t\t<option>MOST POPULER</option>\n\t\t\t\t\t\t\t</select>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"clearfix\"></div>\n\t\t\t\t\t<div class=\"pro-list-fil\">\n\t\t\t\t\t\t<div class=\"col-sm-3\">\n\t\t\t\t\t\t\t<div class=\"pro-list\">\n\t\t\t\t\t\t\t\t<div class=\"slid-img\"><img src=\"assets/img/brand-4.png\" class=\"img-responsive\"></div>\n\t\t\t\t\t\t\t\t<div class=\"slid-con-sec\">\n\t\t\t\t\t\t\t\t\t<h4>Power Plant Health</h4>\n\t\t\t\t\t\t\t\t\t<p class=\"per-pro\"><span class=\"pull-left\">THC 4%</span>\n\t\t\t\t\t\t\t\t\t<span class=\"pull-right\">BCD 4%</span></p>\n\t\t\t\t\t\t\t\t\t<div class=\"clearfix\"></div>\n\t\t\t\t\t\t\t\t\t<p class=\"str-pro-rat\">\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<span> 5.0</span>\n\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"col-sm-3\">\n\t\t\t\t\t\t\t<div class=\"pro-list\">\n\t\t\t\t\t\t\t\t<div class=\"slid-img\"><img src=\"assets/img/brand-4.png\" class=\"img-responsive\"></div>\n\t\t\t\t\t\t\t\t<div class=\"slid-con-sec\">\n\t\t\t\t\t\t\t\t\t<h4>Power Plant Health</h4>\n\t\t\t\t\t\t\t\t\t<p class=\"per-pro\"><span class=\"pull-left\">THC 4%</span>\n\t\t\t\t\t\t\t\t\t<span class=\"pull-right\">BCD 4%</span></p>\n\t\t\t\t\t\t\t\t\t<div class=\"clearfix\"></div>\n\t\t\t\t\t\t\t\t\t<p class=\"str-pro-rat\">\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<span> 5.0</span>\n\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"col-sm-3\">\n\t\t\t\t\t\t\t<div class=\"pro-list\">\n\t\t\t\t\t\t\t\t<div class=\"slid-img\"><img src=\"assets/img/brand-4.png\" class=\"img-responsive\"></div>\n\t\t\t\t\t\t\t\t<div class=\"slid-con-sec\">\n\t\t\t\t\t\t\t\t\t<h4>Power Plant Health</h4>\n\t\t\t\t\t\t\t\t\t<p class=\"per-pro\"><span class=\"pull-left\">THC 4%</span>\n\t\t\t\t\t\t\t\t\t<span class=\"pull-right\">BCD 4%</span></p>\n\t\t\t\t\t\t\t\t\t<div class=\"clearfix\"></div>\n\t\t\t\t\t\t\t\t\t<p class=\"str-pro-rat\">\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<span> 5.0</span>\n\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"col-sm-3\">\n\t\t\t\t\t\t\t<div class=\"pro-list\">\n\t\t\t\t\t\t\t\t<div class=\"slid-img\"><img src=\"assets/img/brand-4.png\" class=\"img-responsive\"></div>\n\t\t\t\t\t\t\t\t<div class=\"slid-con-sec\">\n\t\t\t\t\t\t\t\t\t<h4>Power Plant Health</h4>\n\t\t\t\t\t\t\t\t\t<p class=\"per-pro\"><span class=\"pull-left\">THC 4%</span>\n\t\t\t\t\t\t\t\t\t<span class=\"pull-right\">BCD 4%</span></p>\n\t\t\t\t\t\t\t\t\t<div class=\"clearfix\"></div>\n\t\t\t\t\t\t\t\t\t<p class=\"str-pro-rat\">\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<span> 5.0</span>\n\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"col-sm-3\">\n\t\t\t\t\t\t\t<div class=\"pro-list\">\n\t\t\t\t\t\t\t\t<div class=\"slid-img\"><img src=\"assets/img/brand-4.png\" class=\"img-responsive\"></div>\n\t\t\t\t\t\t\t\t<div class=\"slid-con-sec\">\n\t\t\t\t\t\t\t\t\t<h4>Power Plant Health</h4>\n\t\t\t\t\t\t\t\t\t<p class=\"per-pro\"><span class=\"pull-left\">THC 4%</span>\n\t\t\t\t\t\t\t\t\t<span class=\"pull-right\">BCD 4%</span></p>\n\t\t\t\t\t\t\t\t\t<div class=\"clearfix\"></div>\n\t\t\t\t\t\t\t\t\t<p class=\"str-pro-rat\">\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<span> 5.0</span>\n\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"col-sm-3\">\n\t\t\t\t\t\t\t<div class=\"pro-list\">\n\t\t\t\t\t\t\t\t<div class=\"slid-img\"><img src=\"assets/img/brand-4.png\" class=\"img-responsive\"></div>\n\t\t\t\t\t\t\t\t<div class=\"slid-con-sec\">\n\t\t\t\t\t\t\t\t\t<h4>Power Plant Health</h4>\n\t\t\t\t\t\t\t\t\t<p class=\"per-pro\"><span class=\"pull-left\">THC 4%</span>\n\t\t\t\t\t\t\t\t\t<span class=\"pull-right\">BCD 4%</span></p>\n\t\t\t\t\t\t\t\t\t<div class=\"clearfix\"></div>\n\t\t\t\t\t\t\t\t\t<p class=\"str-pro-rat\">\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<span> 5.0</span>\n\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"col-sm-3\">\n\t\t\t\t\t\t\t<div class=\"pro-list\">\n\t\t\t\t\t\t\t\t<div class=\"slid-img\"><img src=\"assets/img/brand-4.png\" class=\"img-responsive\"></div>\n\t\t\t\t\t\t\t\t<div class=\"slid-con-sec\">\n\t\t\t\t\t\t\t\t\t<h4>Power Plant Health</h4>\n\t\t\t\t\t\t\t\t\t<p class=\"per-pro\"><span class=\"pull-left\">THC 4%</span>\n\t\t\t\t\t\t\t\t\t<span class=\"pull-right\">BCD 4%</span></p>\n\t\t\t\t\t\t\t\t\t<div class=\"clearfix\"></div>\n\t\t\t\t\t\t\t\t\t<p class=\"str-pro-rat\">\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<span> 5.0</span>\n\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"col-sm-3\">\n\t\t\t\t\t\t\t<div class=\"pro-list\">\n\t\t\t\t\t\t\t\t<div class=\"slid-img\"><img src=\"assets/img/brand-4.png\" class=\"img-responsive\"></div>\n\t\t\t\t\t\t\t\t<div class=\"slid-con-sec\">\n\t\t\t\t\t\t\t\t\t<h4>Power Plant Health</h4>\n\t\t\t\t\t\t\t\t\t<p class=\"per-pro\"><span class=\"pull-left\">THC 4%</span>\n\t\t\t\t\t\t\t\t\t<span class=\"pull-right\">BCD 4%</span></p>\n\t\t\t\t\t\t\t\t\t<div class=\"clearfix\"></div>\n\t\t\t\t\t\t\t\t\t<p class=\"str-pro-rat\">\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<span> 5.0</span>\n\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"col-sm-3\">\n\t\t\t\t\t\t\t<div class=\"pro-list\">\n\t\t\t\t\t\t\t\t<div class=\"slid-img\"><img src=\"assets/img/brand-4.png\" class=\"img-responsive\"></div>\n\t\t\t\t\t\t\t\t<div class=\"slid-con-sec\">\n\t\t\t\t\t\t\t\t\t<h4>Power Plant Health</h4>\n\t\t\t\t\t\t\t\t\t<p class=\"per-pro\"><span class=\"pull-left\">THC 4%</span>\n\t\t\t\t\t\t\t\t\t<span class=\"pull-right\">BCD 4%</span></p>\n\t\t\t\t\t\t\t\t\t<div class=\"clearfix\"></div>\n\t\t\t\t\t\t\t\t\t<p class=\"str-pro-rat\">\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<span> 5.0</span>\n\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"col-sm-3\">\n\t\t\t\t\t\t\t<div class=\"pro-list\">\n\t\t\t\t\t\t\t\t<div class=\"slid-img\"><img src=\"assets/img/brand-4.png\" class=\"img-responsive\"></div>\n\t\t\t\t\t\t\t\t<div class=\"slid-con-sec\">\n\t\t\t\t\t\t\t\t\t<h4>Power Plant Health</h4>\n\t\t\t\t\t\t\t\t\t<p class=\"per-pro\"><span class=\"pull-left\">THC 4%</span>\n\t\t\t\t\t\t\t\t\t<span class=\"pull-right\">BCD 4%</span></p>\n\t\t\t\t\t\t\t\t\t<div class=\"clearfix\"></div>\n\t\t\t\t\t\t\t\t\t<p class=\"str-pro-rat\">\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<span> 5.0</span>\n\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"col-sm-3\">\n\t\t\t\t\t\t\t<div class=\"pro-list\">\n\t\t\t\t\t\t\t\t<div class=\"slid-img\"><img src=\"assets/img/brand-4.png\" class=\"img-responsive\"></div>\n\t\t\t\t\t\t\t\t<div class=\"slid-con-sec\">\n\t\t\t\t\t\t\t\t\t<h4>Power Plant Health</h4>\n\t\t\t\t\t\t\t\t\t<p class=\"per-pro\"><span class=\"pull-left\">THC 4%</span>\n\t\t\t\t\t\t\t\t\t<span class=\"pull-right\">BCD 4%</span></p>\n\t\t\t\t\t\t\t\t\t<div class=\"clearfix\"></div>\n\t\t\t\t\t\t\t\t\t<p class=\"str-pro-rat\">\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t\t<span> 5.0</span>\n\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\n\t\t\t\t\t<div class=\"clearfix\"></div>\n\t\t\t\t\t<div class=\"mor-btn-grp more-2-btn-grp text-center\">\n\t\t\t\t\t\t<button class=\"btn btn-default\">See More Items <img src=\"assets/img/arrow-right.png\" class=\"\" width=\"20\"></button>\n\n\t\t\t\t\t</div>\n\t\t\t\t\t\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n<!-- End Dispensaries -->\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/products/products.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProductsComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ProductsComponent = /** @class */ (function () {
+    function ProductsComponent() {
+    }
+    ProductsComponent.prototype.ngOnInit = function () {
+    };
+    ProductsComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-products',
+            template: __webpack_require__("../../../../../src/app/pages/products/products.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/pages/products/products.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], ProductsComponent);
+    return ProductsComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/search/search.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/search/search.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<ngx-spinner></ngx-spinner>\n<!-- End Banner -->\n<div class=\"clearfix\"></div>\n<div class=\"spc-top\"></div>\n<section class=\"seach-list-page\">\n\t<div class=\"container\">\n\t\t<div class=\"row m-0\">\n\t\t\t<div class=\"col-sm-12\">\n\t\t\t\t<h2><img src=\"assets/Icons/search.png\"> {{searchKeyword}}</h2>\n\t\t\t</div>\n\t\t\t<div class=\"col-sm-12\">\n\t\t\t\t<div class=\"col-sm-3\">\n\t\t\t\t\t<img src=\"assets/img/medical-5.png\" class=\"img-responsive\">\n\t\t\t\t</div>\n\t\t\t\t<div class=\"col-sm-9\">\n\t\t\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis iusto assumenda nostrum praesentium iure pariatur laboriosam, facere, repudiandae eveniet molestias culpa adipisci sapiente, aperiam, modi. Mollitia iusto dolorum nobis blanditiis commodi eveniet nihil tenetur non esse iure? Exercitationem, harum numquam nihil impedit officia nulla aliquid incidunt voluptas enim quam eligendi distinctio facilis iure maiores. Atque qui officiis accusantium, illum suscipit aspernatur voluptates ab, fugiat, natus id, eum eligendi? Ea unde molestias odit ut totam quae doloribus odio, atque aliquam assumenda repudiandae ipsum voluptate sapiente sit adipisci dicta rerum corrupti ducimus vitae quos neque fugiat exercitationem sunt voluptas eaque. In, quis!</p>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\t\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/search/search.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SearchComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_services_shared_service__ = __webpack_require__("../../../../../src/app/shared/services/shared.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var SearchComponent = /** @class */ (function () {
+    function SearchComponent(_router, _route, _sharedService) {
+        var _this = this;
+        this._router = _router;
+        this._route = _route;
+        this._sharedService = _sharedService;
+        this._host = __WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].config.BASE_URL;
+        this.items = [];
+        this.products = [];
+        this.routerSubscription = this._router.events.subscribe(function (event) {
+            if (event instanceof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* NavigationEnd */]) {
+                _this.searchKeyword = _this._route.snapshot.queryParams['q'];
+                // this.loadMore  = true;
+                // this.activePage = 1;
+                _this.search();
+            }
+        });
+    }
+    SearchComponent.prototype.ngOnInit = function () {
+    };
+    SearchComponent.prototype.ngOnDestroy = function () {
+        this.routerSubscription.unsubscribe();
+    };
+    SearchComponent.prototype.search = function () {
+        var _this = this;
+        var data = {
+            name: this.searchKeyword || '',
+            city: this._route.snapshot.queryParams['city'] || ''
+        };
+        this._sharedService.loader('show');
+        this._sharedService.post(data, 'search').then(function (res) {
+            _this._sharedService.loader('hide');
+            if (res.success) {
+                _this.items = res.data.item;
+                _this.products = res.data.Product;
+            }
+            else {
+            }
+        }, function (error) { });
+    };
+    SearchComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-search',
+            template: __webpack_require__("../../../../../src/app/pages/search/search.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/pages/search/search.component.css")]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */],
+            __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */],
+            __WEBPACK_IMPORTED_MODULE_2__shared_services_shared_service__["a" /* SharedService */]])
+    ], SearchComponent);
+    return SearchComponent;
 }());
 
 

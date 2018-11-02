@@ -136,6 +136,63 @@ a.navbar-brand>img.img-responsive {
     color: #fff;
     margin: 0 10px 0 0;
 }
+.search-list {
+    position: absolute;
+    right:16px;
+    top: 42px;
+    background: #ffffff;
+    width:629px;
+    height: 300px;
+    overflow-y: scroll;
+    border: 1px solid #c9c9c9;
+}
+#myUL>li>h5 {
+    background: #f2f5f5;
+    margin: 0;
+    line-height: 40px;
+    padding: 0 15px;
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    font-size: 14px;
+    font-weight: 600;
+}
+#myUL>li>p {
+    border-bottom: 1px solid #ddd;
+    background-color: #fff;
+    margin: 0;
+    line-height: normal;
+}
+#myUL>li>p:last-child, 
+.loca-trank>ul#myUL>li:last-child>a {
+    border-bottom: none;
+}
+#myUL li a, 
+.loca-trank>ul#myUL>li>a{
+    padding:6px 12px;
+    text-decoration: none;
+    font-size: 13px;
+    color: black;
+    display: block;
+    line-height: 25px;
+    font-weight: 600;
+}
+#myUL li a:hover, 
+.loca-trank>ul#myUL>li>a:hover {
+    color: #3db370;
+}
+#myUL>li>p>a>span {
+       width: 50%;
+    display: inline-block;
+    margin: 0 -2px;
+}
+#myUL>li>p>a>span.right-bar-ser {
+    text-align: right;
+}
+.loca-trank>ul#myUL>li>a{
+    cursor: pointer;
+     border-bottom: 1px solid #ddd;
+}
+
 /*
 ################
                Start Banner
@@ -2153,6 +2210,19 @@ p.str-pro-rat {
 }
 p.str-pro-rat>span {
     color: #000;
+}
+/*
+################
+               Search List Page
+################
+*/
+.seach-list-page h2 {
+    border-bottom: 1px solid #ccc;
+    padding: 12px 0;
+    font-weight:400;
+}
+.seach-list-page h2>img {
+    margin-right:10px;
 }
 /*
 ################
