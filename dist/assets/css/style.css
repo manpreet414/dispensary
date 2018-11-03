@@ -2080,7 +2080,8 @@ aside.sidebar-loct::-webkit-scrollbar-thumb:hover {
     font-size: 12px; 
 }
 .dispen-dashboard-nav-top {
-    margin-top: 155px;
+    margin-top: 30px;
+    position: absolute;
 }
 .form-group.fil-ser-list>select.form-control {
     width: 217px;
@@ -2290,5 +2291,5 @@ p.str-pro-rat>span {
     position: absolute ;
     padding-left: 1030px ;
     z-index: 999 ;
-    padding-top: 64px;
+    padding-top: 11px;
 }

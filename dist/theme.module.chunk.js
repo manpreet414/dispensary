@@ -69,7 +69,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".flash-messages{\n    position: absolute ;\n    padding-left: 1030px ;\n    z-index: 999 ;\n    padding-top: 11px;\n}", ""]);
 
 // exports
 
@@ -82,7 +82,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/theme/header/header.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<header>\n\t<div class=\"navbar-fixed-top\">\n\t\t<!-- This is a Nav -->\n\t    <nav class=\"navbar navbar-inverse\">\n\t\t  <div class=\"container-flude\">\n\t\t    <div class=\"navbar-header\">\n\t\t      <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\"#myNavbar\">\n\t\t        <span class=\"icon-bar\"></span>\n\t\t        <span class=\"icon-bar\"></span>\n\t\t        <span class=\"icon-bar\"></span>                        \n\t\t      </button>\n\t\t      <a class=\"navbar-brand EKDPS2032B-06011991\" href=\"#/\"><img src=\"assets/img/logo.png\" class=\"img-responsive\"></a>\n\t\t    </div>\n\t\t    <div class=\"collapse navbar-collapse\" id=\"myNavbar\">\n\t\t      <ul class=\"nav navbar-nav navbar-right\">\n\t\t        <li class=\"active\"><a href=\"#/\">Home</a></li>\n\t\t        <li><a href=\"#/\">maps</a></li>\n\t\t        <li><a >Products</a></li>\n\t\t        <li><a href=\"#/\">Contact</a></li>\n\t\t        <li><a href=\"#/auth/login-signup\" *ngIf=\"!token\" class=\"btn cus-btn cus-login\">Login/signup</a></li>\n\t\t        <li><a *ngIf=\"token\" (click)=\"logout()\" class=\"btn cus-btn cus-login\">Logout</a></li>\n\t\t      </ul>\n\t\t    </div>\n\t\t  </div>\n\t\t</nav>\n\t\t<!-- End Nav -->\n  \t\t<ngx-flash-messages></ngx-flash-messages>\n\t\t<!-- This is a Search Bar -->\n\t\t<div class=\"search-section\">\n\t\t\t<div class=\"container-flude\">\n\t\t\t\t<div class=\"row m-0\">\n\t\t\t\t\t<form action=\"\" class=\"col-sm-12 p-o\">\n\t\t\t\t\t\t<div class=\"col-sm-4 col-md-3 col-sm-offset-6 p-r\">\n\t\t\t\t\t\t\t<div class=\"cus-form-grp\">\n\t\t\t\t\t\t\t\t<div class=\"form-group m-0\">\n\t\t\t\t\t\t\t\t\t<input type=\"text\" class=\"form-control\" placeholder=\"Search for dispensaries, deliveries & brands\" name=\"search\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<button type=\"submit\" class=\"sear-brand\"><i class=\"fa fa-search\" aria-hidden=\"true\"></i></button>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"col-sm-3 col-md-3 p-l\">\n\t\t\t\t\t\t\t<div class=\"cus-form-grp\">\n\t\t\t\t\t\t\t\t<div class=\"form-group m-0\">\n\t\t\t\t\t\t\t\t\t<input type=\"text\" class=\"form-control\" placeholder=\"Vanxouver, BC\" name=\"search\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<button type=\"submit\" class=\"sear-brand-locat\"><img src=\"assets/img/right-search.png\"></button>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<!-- <div class=\"search-list\">\n\t\t\t\t\t\t\t<ul id=\"myUL\">\n\t\t\t\t\t\t\t  <li>\n\t\t\t\t\t\t\t  \t<h5><img src=\"assets/img/brand-icon.png\"> BRAND</h5>\t\n\t\t\t\t\t\t\t  \t<p>\n\t\t\t\t\t\t\t  \t\t<a href=\"#\">\n\t\t\t\t\t\t\t  \t\t\t<span class=\"left-bar-ser\">HHC</span>\n\t\t\t\t\t\t\t  \t\t</a>\n\t\t\t\t\t\t\t  \t</p>\n\t\t\t\t\t\t\t  \t<p>\n\t\t\t\t\t\t\t  \t\t<a href=\"#\">\n\t\t\t\t\t\t\t  \t\t\t<span class=\"left-bar-ser\">HHC</span>\n\t\t\t\t\t\t\t  \t\t</a>\n\t\t\t\t\t\t\t  \t</p>\n\t\t\t\t\t\t\t  \t<p>\n\t\t\t\t\t\t\t  \t\t<a href=\"#\">\n\t\t\t\t\t\t\t  \t\t\t<span class=\"left-bar-ser\">HHC</span>\n\t\t\t\t\t\t\t  \t\t</a>\n\t\t\t\t\t\t\t  \t</p>\n\t\t\t\t\t\t\t  \t<p>\n\t\t\t\t\t\t\t  \t\t<a href=\"#\">\n\t\t\t\t\t\t\t  \t\t\t<span class=\"left-bar-ser\">HHC</span>\n\t\t\t\t\t\t\t  \t\t</a>\n\t\t\t\t\t\t\t  \t</p>\n\t\t\t\t\t\t\t  \t<p>\n\t\t\t\t\t\t\t  \t\t<a href=\"#\">\n\t\t\t\t\t\t\t  \t\t\t<span class=\"left-bar-ser\">HHC</span>\n\t\t\t\t\t\t\t  \t\t</a>\n\t\t\t\t\t\t\t  \t</p>\n\t\t\t\t\t\t\t  </li>\n\t\t\t\t\t\t\t  <li>\n\t\t\t\t\t\t\t  \t<h5><img src=\"assets/img/dispensery-icon.png\"> DISPENSERY</h5>\t\n\t\t\t\t\t\t\t  \t<p>\n\t\t\t\t\t\t\t  \t\t<a href=\"#\">\n\t\t\t\t\t\t\t  \t\t\t<span class=\"left-bar-ser\">APC Fullerton</span>\n\t\t\t\t\t\t\t\t\t\t<span class=\"right-bar-ser\">15 Miles | Fullerton | Open</span>\n\t\t\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t  \t<p>\n\t\t\t\t\t\t\t  \t\t<a href=\"#\">\n\t\t\t\t\t\t\t  \t\t\t<span class=\"left-bar-ser\">HHC</span>\n\t\t\t\t\t\t\t  \t\t\t<span class=\"right-bar-ser\">25 Miles | La Puente | Open</span>\n\t\t\t\t\t\t\t  \t\t</a>\n\t\t\t\t\t\t\t  \t</p>\n\t\t\t\t\t\t\t  \t<p>\n\t\t\t\t\t\t\t  \t\t<a href=\"#\">\n\t\t\t\t\t\t\t  \t\t\t<span class=\"left-bar-ser\">HHC</span>\n\t\t\t\t\t\t\t  \t\t\t<span class=\"right-bar-ser\">95 Miles | La Puente | Open</span>\n\t\t\t\t\t\t\t  \t\t</a>\n\t\t\t\t\t\t\t  \t</p>\n\t\t\t\t\t\t\t  \t<p>\n\t\t\t\t\t\t\t  \t\t<a href=\"#\">\n\t\t\t\t\t\t\t  \t\t\t<span class=\"left-bar-ser\">HHC</span>\n\t\t\t\t\t\t\t  \t\t\t<span class=\"right-bar-ser\">75 Miles | La Puente | Open</span>\n\t\t\t\t\t\t\t  \t\t</a>\n\t\t\t\t\t\t\t  \t</p>\n\t\t\t\t\t\t\t  \t<p>\n\t\t\t\t\t\t\t  \t\t<a href=\"#\">\n\t\t\t\t\t\t\t  \t\t\t<span class=\"left-bar-ser\">HHC</span>\n\t\t\t\t\t\t\t  \t\t\t<span class=\"right-bar-ser\">35 Miles | La Puente | Open</span>\n\t\t\t\t\t\t\t  \t\t</a>\n\t\t\t\t\t\t\t  \t</p>\n\t\t\t\t\t\t\t  </li>\n\t\t\t\t\t\t\t  <li>\n\t\t\t\t\t\t\t  \t<h5><img src=\"assets/img/doctor-icon.png\"> DOCTORS</h5>\t\n\t\t\t\t\t\t\t  \t<p>\n\t\t\t\t\t\t\t  \t\t<a href=\"#\">\n\t\t\t\t\t\t\t  \t\t<span class=\"left-bar-ser\">AMC- American Medical Consultants</span>\n\t\t\t\t\t\t\t  \t\t<span class=\"right-bar-ser\">1956 Miles | Detroit - DOCTORS | Open</span></a>\n\t\t\t\t\t\t\t  \t</p>\n\t\t\t\t\t\t\t  \t<p>\n\t\t\t\t\t\t\t  \t\t<a href=\"#\">\n\t\t\t\t\t\t\t  \t\t<span class=\"left-bar-ser\">AMC- American Medical Consultants</span>\n\t\t\t\t\t\t\t  \t\t<span class=\"right-bar-ser\">1956 Miles | Detroit - DOCTORS | Open</span></a>\n\t\t\t\t\t\t\t  \t</p>\n\t\t\t\t\t\t\t  \t<p>\n\t\t\t\t\t\t\t  \t\t<a href=\"#\">\n\t\t\t\t\t\t\t  \t\t<span class=\"left-bar-ser\">AMC- American Medical Consultants</span>\n\t\t\t\t\t\t\t  \t\t<span class=\"right-bar-ser\">1956 Miles | Detroit - DOCTORS | Open</span></a>\n\t\t\t\t\t\t\t  \t</p>\n\t\t\t\t\t\t\t  \t<p>\n\t\t\t\t\t\t\t  \t\t<a href=\"#\">\n\t\t\t\t\t\t\t  \t\t<span class=\"left-bar-ser\">AMC- American Medical Consultants</span>\n\t\t\t\t\t\t\t  \t\t<span class=\"right-bar-ser\">1956 Miles | Detroit - DOCTORS | Open</span></a>\n\t\t\t\t\t\t\t  \t</p>\n\t\t\t\t\t\t\t  \t<p>\n\t\t\t\t\t\t\t  \t\t<a href=\"#\">\n\t\t\t\t\t\t\t  \t\t<span class=\"left-bar-ser\">AMC- American Medical Consultants</span>\n\t\t\t\t\t\t\t  \t\t<span class=\"right-bar-ser\">1956 Miles | Detroit - DOCTORS | Open</span></a>\n\t\t\t\t\t\t\t  \t</p>\n\t\t\t\t\t\t\t  </li>\n\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t</div> -->\n\t\t\t\t\t\t<div class=\"search-list loca-trank\">\n\t\t\t\t\t\t\t<ul id=\"myUL\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t<h5><img src=\"assets/img/search-loc-iocn.png\">NEIGHBORHOODS</h5>\n\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t<li><a class=\"\">Nevada</a></li>\n\t\t\t\t\t\t\t\t<li><a class=\"\">Nevada</a></li>\n\t\t\t\t\t\t\t\t<!-- <li><a class=\"\">Nevada</a></li>\n\t\t\t\t\t\t\t\t<li><a class=\"\">Nevada</a></li> -->\n\t\t\t\t\t\t\t\t<li><a class=\"\">Nevada</a></li>\n\t\t\t\t\t\t\t\t<li><a class=\"\">Nevada</a></li>\t\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t<!-- \t<h5><img src=\"assets/img/search-loc-iocn.png\">REGIONSS</h5>\n\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t<li><a class=\"\">Nevada</a></li>\n\t\t\t\t\t\t\t\t<li><a class=\"\">Nevada</a></li>\n\t\t\t\t\t\t\t\t<li><a class=\"\">Nevada</a></li>\n\t\t\t\t\t\t\t\t<li><a class=\"\">Nevada</a></li>\n\t\t\t\t\t\t\t\t<li><a class=\"\">Nevada</a></li>\n\t\t\t\t\t\t\t\t<li><a class=\"\">Nevada</a></li>\t -->\n\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</form>\n\t\t\t\t</div> \n\t\t\t</div>\n\t\t</div>\n\t\t<!-- End Search Bar -->\n\t</div>\n</header>"
+module.exports = "<header>\n\t<div class=\"navbar-fixed-top\">\n\t\t<!-- This is a Nav -->\n\t    <nav class=\"navbar navbar-inverse\">\n\t\t  <div class=\"container-flude\">\n\t\t    <div class=\"navbar-header\">\n\t\t      <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\"#myNavbar\">\n\t\t        <span class=\"icon-bar\"></span>\n\t\t        <span class=\"icon-bar\"></span>\n\t\t        <span class=\"icon-bar\"></span>                        \n\t\t      </button>\n\t\t      <a class=\"navbar-brand EKDPS2032B-06011991\" href=\"#/\"><img src=\"assets/img/logo.png\" class=\"img-responsive\"></a>\n\t\t    </div>\n\t\t    <div class=\"collapse navbar-collapse\" id=\"myNavbar\">\n\t\t      <ul class=\"nav navbar-nav navbar-right\">\n\t\t        <li class=\"active\"><a href=\"#/\">Home</a></li>\n\t\t        <li><a href=\"#/pages/map\">maps</a></li>\n\t\t        <li><a href=\"#/page/products\">Products</a></li>\n\t\t        <li><a href=\"#/pages/contact\">Contact</a></li>\n\t\t        <li><a href=\"#/auth/login-signup\" *ngIf=\"!token\" class=\"btn cus-btn cus-login\">Login/signup</a></li>\n\t\t        <li><a *ngIf=\"token\" (click)=\"logout()\" class=\"btn cus-btn cus-login\">Logout</a></li>\n\t\t      </ul>\n\t\t    </div>\n\t\t  </div>\n\t\t</nav>\n\t\t<!-- End Nav -->\n  \t\t<ngx-flash-messages></ngx-flash-messages>\n\t\t<!-- This is a Search Bar -->\n\t\t<div class=\"search-section\">\n\t\t\t<div class=\"container-flude\">\n\t\t\t\t<div class=\"row m-0\">\n\t\t\t\t\t<form action=\"\" class=\"col-sm-12 p-o\">\n\t\t\t\t\t\t<div class=\"col-sm-4 col-md-3 col-sm-offset-6 p-r\">\n\t\t\t\t\t\t\t<div class=\"cus-form-grp\">\n\t\t\t\t\t\t\t\t<div class=\"form-group m-0\">\n\t\t\t\t\t\t\t\t\t<input  autocomplete=\"off\" (keyup)=\"searchProduct();showCities=false;showItems=true;\" [(ngModel)]=\"searchKeyword\" id=\"search\" type=\"text\" class=\"form-control\" placeholder=\"Search for dispensaries, doctors & brands\" name=\"search\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<button type=\"submit\" class=\"sear-brand\"><i class=\"fa fa-search\" aria-hidden=\"true\"></i></button>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"col-sm-3 col-md-3 p-l\">\n\t\t\t\t\t\t\t<div class=\"cus-form-grp\">\n\t\t\t\t\t\t\t\t<div class=\"form-group m-0\">\n\t\t\t\t\t\t\t\t\t<input  autocomplete=\"off\" (keyup)=\"searchCity();showItems=false;showCities=true;\" [(ngModel)]=\"city\" id=\"city\" type=\"text\" class=\"form-control\" placeholder=\"{{selectedCity}}\" name=\"search\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<button type=\"submit\" class=\"sear-brand-locat\"><img src=\"assets/img/right-search.png\"></button>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"search-list\" *ngIf=\"showItems\" (mouseleave)=\"searchKeyword='';Items=[];showItems=false\">\n\t\t\t\t\t\t\t<ul id=\"myUL\">\n\t\t\t\t\t\t\t <!-- <li *ngIf=\"Items.length == 0\">No result found with \"<strong>{{searchKeyword}}</strong>\"</li> -->\n\t\t\t\t\t\t\t  <li>\n\t\t\t\t\t\t\t  \t<h5><img src=\"assets/img/brand-icon.png\"> BRAND</h5>\t\n\t\t\t\t\t\t\t  \t<p *ngFor=\"let obj of Items;\" [hidden]=\"obj.businessType=='doctor' || obj.businessType=='dispensary'\">\n\t\t\t\t\t\t\t  \t\t<a  href=\"#/page/item-detail/{{obj.id}}\">\n\t\t\t\t\t\t\t  \t\t\t<span class=\"left-bar-ser\">{{obj.name}}</span>\n\t\t\t\t\t\t\t  \t\t</a>\n\t\t\t\t\t\t\t  \t</p>\n\t\t\t\t\t\t\t  </li>\n\t\t\t\t\t\t\t  <li>\n\t\t\t\t\t\t\t  \t<h5><img src=\"assets/img/dispensery-icon.png\"> DISPENSERY</h5>\t\n\t\t\t\t\t\t\t  \t<p *ngFor=\"let obj of Items;\" [hidden]=\"obj.businessType == 'doctor' || obj.businessType == 'brand'\">\n\t\t\t\t\t\t\t  \t\t<a href=\"#/page/item-detail/{{obj.id}}\">\n\t\t\t\t\t\t\t  \t\t\t<span class=\"left-bar-ser\">{{obj.name}}</span>\n\t\t\t\t\t\t\t\t\t\t<span class=\"right-bar-ser\"><!-- 15 Miles |  -->{{obj.city}} <!-- | Open --></span>\n\t\t\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t  </li>\n\t\t\t\t\t\t\t  <li>\n\t\t\t\t\t\t\t  \t<h5><img src=\"assets/img/doctor-icon.png\"> DOCTORS</h5>\t\n\t\t\t\t\t\t\t  \t<p *ngFor=\"let obj of Items;\" [hidden]=\"obj.businessType=='dispensary' || obj.businessType=='brand'\">\n\t\t\t\t\t\t\t  \t\t<a href=\"#/page/item-detail/{{obj.id}}\">\n\t\t\t\t\t\t\t\t  \t\t<span class=\"left-bar-ser\">{{obj.name}}</span>\n\t\t\t\t\t\t\t\t  \t\t<!-- <span class=\"right-bar-ser\">1956 Miles | Detroit - DOCTORS | Open</span> -->\n\t\t\t\t\t\t\t  \t\t</a>\n\t\t\t\t\t\t\t  \t</p>\n\t\t\t\t\t\t\t  </li>\n\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"search-list loca-trank\" *ngIf=\"showCities\" (mouseleave)=\"city='';cities=[];showCities=false\">\n\t\t\t\t\t\t\t<ul id=\"myUL\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t<h5><img src=\"assets/img/search-loc-iocn.png\">REGIONSS</h5>\n\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t<li *ngFor=\"let obj of cities\"><a class=\"\" (click)=\"selectedCity=obj.name;showCities=false;city=''\">{{obj.name}}</a></li>\n\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</form>\n\t\t\t\t</div> \n\t\t\t</div>\n\t\t</div>\n\t\t<!-- End Search Bar -->\n\t</div>\n</header>"
 
 /***/ }),
 
@@ -115,6 +115,10 @@ var HeaderComponent = /** @class */ (function () {
         this._cookieService = _cookieService;
         this.token = '';
         this.user = {};
+        this.cities = [];
+        this.Items = [];
+        this.showCities = false;
+        this.showItems = false;
     }
     HeaderComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -135,6 +139,32 @@ var HeaderComponent = /** @class */ (function () {
         this._cookieService.removeAll();
         this._sharedService.showAlert('Logout Sucessfully', 'alert-success');
         this._router.navigate(['/auth/login-signup']);
+    };
+    HeaderComponent.prototype.searchCity = function () {
+        var _this = this;
+        var options = {
+            city: this.city
+        };
+        this._sharedService.queryParams('searchCity', options).then(function (res) {
+            if (res.success) {
+                _this.cities = res.data || [];
+            }
+            else { }
+        }, function (error) { });
+    };
+    HeaderComponent.prototype.searchProduct = function () {
+        var _this = this;
+        console.log("yssss");
+        var data = {
+            name: this.searchKeyword,
+            city: this.selectedCity
+        };
+        this._sharedService.post(data, 'Search').then(function (res) {
+            if (res.success) {
+                _this.Items = res.data.Item || [];
+            }
+            else { }
+        }, function (error) { });
     };
     HeaderComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -303,18 +333,20 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ThemeModule", function() { return ThemeModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__("../../../common/esm5/common.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__theme_routing_module__ = __webpack_require__("../../../../../src/app/theme/theme-routing.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__header_header_component__ = __webpack_require__("../../../../../src/app/theme/header/header.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__footer_footer_component__ = __webpack_require__("../../../../../src/app/theme/footer/footer.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__layout_layout_component__ = __webpack_require__("../../../../../src/app/theme/layout/layout.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shared_shared_module__ = __webpack_require__("../../../../../src/app/shared/shared.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_ngx_flash_messages__ = __webpack_require__("../../../../ngx-flash-messages/lib-dist/flash-messages.module.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__("../../../forms/esm5/forms.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__theme_routing_module__ = __webpack_require__("../../../../../src/app/theme/theme-routing.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__header_header_component__ = __webpack_require__("../../../../../src/app/theme/header/header.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__footer_footer_component__ = __webpack_require__("../../../../../src/app/theme/footer/footer.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__layout_layout_component__ = __webpack_require__("../../../../../src/app/theme/layout/layout.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__shared_shared_module__ = __webpack_require__("../../../../../src/app/shared/shared.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_ngx_flash_messages__ = __webpack_require__("../../../../ngx-flash-messages/lib-dist/flash-messages.module.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -330,11 +362,12 @@ var ThemeModule = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             imports: [
                 __WEBPACK_IMPORTED_MODULE_1__angular_common__["CommonModule"],
-                __WEBPACK_IMPORTED_MODULE_6__shared_shared_module__["a" /* SharedModule */],
-                __WEBPACK_IMPORTED_MODULE_2__theme_routing_module__["a" /* ThemeRoutingModule */],
-                __WEBPACK_IMPORTED_MODULE_7_ngx_flash_messages__["a" /* FlashMessagesModule */]
+                __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
+                __WEBPACK_IMPORTED_MODULE_7__shared_shared_module__["a" /* SharedModule */],
+                __WEBPACK_IMPORTED_MODULE_3__theme_routing_module__["a" /* ThemeRoutingModule */],
+                __WEBPACK_IMPORTED_MODULE_8_ngx_flash_messages__["a" /* FlashMessagesModule */]
             ],
-            declarations: [__WEBPACK_IMPORTED_MODULE_3__header_header_component__["a" /* HeaderComponent */], __WEBPACK_IMPORTED_MODULE_4__footer_footer_component__["a" /* FooterComponent */], __WEBPACK_IMPORTED_MODULE_5__layout_layout_component__["a" /* LayoutComponent */]]
+            declarations: [__WEBPACK_IMPORTED_MODULE_4__header_header_component__["a" /* HeaderComponent */], __WEBPACK_IMPORTED_MODULE_5__footer_footer_component__["a" /* FooterComponent */], __WEBPACK_IMPORTED_MODULE_6__layout_layout_component__["a" /* LayoutComponent */]]
         })
     ], ThemeModule);
     return ThemeModule;
