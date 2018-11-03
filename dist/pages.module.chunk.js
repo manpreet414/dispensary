@@ -48,7 +48,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var ItemDetailComponent = /** @class */ (function () {
-    function ItemDetailComponent(_route, _sharedService) {
+    function ItemDetailComponent(_router, _route, _sharedService) {
+        var _this = this;
+        this._router = _router;
         this._route = _route;
         this._sharedService = _sharedService;
         this._host = __WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].config.BASE_URL;
@@ -75,9 +77,12 @@ var ItemDetailComponent = /** @class */ (function () {
         };
         this.loginID = '';
         this.productObj = {};
+        this.routerSubscription = this._router.events.subscribe(function (event) {
+            if (event instanceof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* NavigationEnd */])
+                _this.fetch();
+        });
     }
     ItemDetailComponent.prototype.ngOnInit = function () {
-        this.fetch();
         if (this._sharedService.isLogin()) {
             this.favorate();
             this.loginID = this._sharedService.loginID();
@@ -85,6 +90,9 @@ var ItemDetailComponent = /** @class */ (function () {
         this.fetchProduct();
         this.fetchReviews();
         this.getAllCategories();
+    };
+    ItemDetailComponent.prototype.ngOnDestroy = function () {
+        this.routerSubscription.unsubscribe();
     };
     ItemDetailComponent.prototype.fetch = function () {
         var _this = this;
@@ -257,7 +265,8 @@ var ItemDetailComponent = /** @class */ (function () {
             template: __webpack_require__("../../../../../src/app/pages/item-detail/item-detail.component.html"),
             styles: [__webpack_require__("../../../../../src/app/pages/item-detail/item-detail.component.css")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */],
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */],
+            __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */],
             __WEBPACK_IMPORTED_MODULE_2__shared_services_shared_service__["a" /* SharedService */]])
     ], ItemDetailComponent);
     return ItemDetailComponent;
