@@ -555,7 +555,7 @@ var CookieService = /** @class */ (function () {
  * @suppress {checkTypes} checked by tsc
  */
 var CookieBackendService = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["b" /* __extends */])(CookieBackendService, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["c" /* __extends */])(CookieBackendService, _super);
     function CookieBackendService(request, response, _optionsProvider) {
         var _this = _super.call(this, _optionsProvider) || this;
         _this.request = request;
@@ -6759,16 +6759,16 @@ function tryCatch(fn) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (immutable) */ __webpack_exports__["b"] = __extends;
+/* harmony export (immutable) */ __webpack_exports__["c"] = __extends;
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __assign; });
 /* unused harmony export __rest */
 /* unused harmony export __decorate */
 /* unused harmony export __param */
 /* unused harmony export __metadata */
-/* unused harmony export __awaiter */
-/* unused harmony export __generator */
+/* harmony export (immutable) */ __webpack_exports__["b"] = __awaiter;
+/* harmony export (immutable) */ __webpack_exports__["d"] = __generator;
 /* unused harmony export __exportStar */
-/* unused harmony export __values */
+/* harmony export (immutable) */ __webpack_exports__["e"] = __values;
 /* unused harmony export __read */
 /* unused harmony export __spread */
 /* unused harmony export __await */
@@ -7562,7 +7562,7 @@ function _stripIndexHtml(url) {
  * \@stable
  */
 var HashLocationStrategy = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_1_tslib__["b" /* __extends */])(HashLocationStrategy, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_1_tslib__["c" /* __extends */])(HashLocationStrategy, _super);
     function HashLocationStrategy(_platformLocation, _baseHref) {
         var _this = _super.call(this) || this;
         _this._platformLocation = _platformLocation;
@@ -7725,7 +7725,7 @@ var HashLocationStrategy = /** @class */ (function (_super) {
  * \@stable
  */
 var PathLocationStrategy = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_1_tslib__["b" /* __extends */])(PathLocationStrategy, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_1_tslib__["c" /* __extends */])(PathLocationStrategy, _super);
     function PathLocationStrategy(_platformLocation, href) {
         var _this = _super.call(this) || this;
         _this._platformLocation = _platformLocation;
@@ -8660,7 +8660,7 @@ function getPluralCategory(value, cases, ngLocalization, locale) {
  * \@experimental
  */
 var NgLocaleLocalization = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_1_tslib__["b" /* __extends */])(NgLocaleLocalization, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_1_tslib__["c" /* __extends */])(NgLocaleLocalization, _super);
     function NgLocaleLocalization(locale, /** @deprecated from v5 */
         deprecatedPluralFn) {
         var _this = _super.call(this) || this;
@@ -15121,7 +15121,7 @@ var NullTemplateVisitor = /** @class */ (function () {
  * in an template ast recursively.
  */
 var RecursiveTemplateAstVisitor = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(RecursiveTemplateAstVisitor, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(RecursiveTemplateAstVisitor, _super);
     function RecursiveTemplateAstVisitor() {
         return _super.call(this) || this;
     }
@@ -16369,7 +16369,7 @@ function spanOf(ast) {
 function findNode(nodes, position) {
     var /** @type {?} */ path = [];
     var /** @type {?} */ visitor = new /** @class */ (function (_super) {
-        Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(class_1, _super);
+        Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(class_1, _super);
         function class_1() {
             return _super !== null && _super.apply(this, arguments) || this;
         }
@@ -18414,7 +18414,7 @@ var AST = /** @class */ (function () {
  * therefore not interpreted by the Angular's own expression parser.
  */
 var Quote = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(Quote, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(Quote, _super);
     function Quote(span, prefix, uninterpretedExpression, location) {
         var _this = _super.call(this, span) || this;
         _this.prefix = prefix;
@@ -18446,7 +18446,7 @@ var Quote = /** @class */ (function (_super) {
     return Quote;
 }(AST));
 var EmptyExpr = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(EmptyExpr, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(EmptyExpr, _super);
     function EmptyExpr() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
@@ -18467,7 +18467,7 @@ var EmptyExpr = /** @class */ (function (_super) {
     return EmptyExpr;
 }(AST));
 var ImplicitReceiver = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(ImplicitReceiver, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(ImplicitReceiver, _super);
     function ImplicitReceiver() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
@@ -18491,7 +18491,7 @@ var ImplicitReceiver = /** @class */ (function (_super) {
  * Multiple expressions separated by a semicolon.
  */
 var Chain = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(Chain, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(Chain, _super);
     function Chain(span, expressions) {
         var _this = _super.call(this, span) || this;
         _this.expressions = expressions;
@@ -18514,7 +18514,7 @@ var Chain = /** @class */ (function (_super) {
     return Chain;
 }(AST));
 var Conditional = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(Conditional, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(Conditional, _super);
     function Conditional(span, condition, trueExp, falseExp) {
         var _this = _super.call(this, span) || this;
         _this.condition = condition;
@@ -18539,7 +18539,7 @@ var Conditional = /** @class */ (function (_super) {
     return Conditional;
 }(AST));
 var PropertyRead = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(PropertyRead, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(PropertyRead, _super);
     function PropertyRead(span, receiver, name) {
         var _this = _super.call(this, span) || this;
         _this.receiver = receiver;
@@ -18563,7 +18563,7 @@ var PropertyRead = /** @class */ (function (_super) {
     return PropertyRead;
 }(AST));
 var PropertyWrite = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(PropertyWrite, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(PropertyWrite, _super);
     function PropertyWrite(span, receiver, name, value) {
         var _this = _super.call(this, span) || this;
         _this.receiver = receiver;
@@ -18588,7 +18588,7 @@ var PropertyWrite = /** @class */ (function (_super) {
     return PropertyWrite;
 }(AST));
 var SafePropertyRead = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(SafePropertyRead, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(SafePropertyRead, _super);
     function SafePropertyRead(span, receiver, name) {
         var _this = _super.call(this, span) || this;
         _this.receiver = receiver;
@@ -18612,7 +18612,7 @@ var SafePropertyRead = /** @class */ (function (_super) {
     return SafePropertyRead;
 }(AST));
 var KeyedRead = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(KeyedRead, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(KeyedRead, _super);
     function KeyedRead(span, obj, key) {
         var _this = _super.call(this, span) || this;
         _this.obj = obj;
@@ -18636,7 +18636,7 @@ var KeyedRead = /** @class */ (function (_super) {
     return KeyedRead;
 }(AST));
 var KeyedWrite = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(KeyedWrite, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(KeyedWrite, _super);
     function KeyedWrite(span, obj, key, value) {
         var _this = _super.call(this, span) || this;
         _this.obj = obj;
@@ -18661,7 +18661,7 @@ var KeyedWrite = /** @class */ (function (_super) {
     return KeyedWrite;
 }(AST));
 var BindingPipe = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(BindingPipe, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(BindingPipe, _super);
     function BindingPipe(span, exp, name, args) {
         var _this = _super.call(this, span) || this;
         _this.exp = exp;
@@ -18686,7 +18686,7 @@ var BindingPipe = /** @class */ (function (_super) {
     return BindingPipe;
 }(AST));
 var LiteralPrimitive = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(LiteralPrimitive, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(LiteralPrimitive, _super);
     function LiteralPrimitive(span, value) {
         var _this = _super.call(this, span) || this;
         _this.value = value;
@@ -18709,7 +18709,7 @@ var LiteralPrimitive = /** @class */ (function (_super) {
     return LiteralPrimitive;
 }(AST));
 var LiteralArray = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(LiteralArray, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(LiteralArray, _super);
     function LiteralArray(span, expressions) {
         var _this = _super.call(this, span) || this;
         _this.expressions = expressions;
@@ -18732,7 +18732,7 @@ var LiteralArray = /** @class */ (function (_super) {
     return LiteralArray;
 }(AST));
 var LiteralMap = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(LiteralMap, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(LiteralMap, _super);
     function LiteralMap(span, keys, values) {
         var _this = _super.call(this, span) || this;
         _this.keys = keys;
@@ -18756,7 +18756,7 @@ var LiteralMap = /** @class */ (function (_super) {
     return LiteralMap;
 }(AST));
 var Interpolation = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(Interpolation, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(Interpolation, _super);
     function Interpolation(span, strings, expressions) {
         var _this = _super.call(this, span) || this;
         _this.strings = strings;
@@ -18780,7 +18780,7 @@ var Interpolation = /** @class */ (function (_super) {
     return Interpolation;
 }(AST));
 var Binary = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(Binary, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(Binary, _super);
     function Binary(span, operation, left, right) {
         var _this = _super.call(this, span) || this;
         _this.operation = operation;
@@ -18805,7 +18805,7 @@ var Binary = /** @class */ (function (_super) {
     return Binary;
 }(AST));
 var PrefixNot = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(PrefixNot, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(PrefixNot, _super);
     function PrefixNot(span, expression) {
         var _this = _super.call(this, span) || this;
         _this.expression = expression;
@@ -18828,7 +18828,7 @@ var PrefixNot = /** @class */ (function (_super) {
     return PrefixNot;
 }(AST));
 var NonNullAssert = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(NonNullAssert, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(NonNullAssert, _super);
     function NonNullAssert(span, expression) {
         var _this = _super.call(this, span) || this;
         _this.expression = expression;
@@ -18851,7 +18851,7 @@ var NonNullAssert = /** @class */ (function (_super) {
     return NonNullAssert;
 }(AST));
 var MethodCall = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(MethodCall, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(MethodCall, _super);
     function MethodCall(span, receiver, name, args) {
         var _this = _super.call(this, span) || this;
         _this.receiver = receiver;
@@ -18876,7 +18876,7 @@ var MethodCall = /** @class */ (function (_super) {
     return MethodCall;
 }(AST));
 var SafeMethodCall = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(SafeMethodCall, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(SafeMethodCall, _super);
     function SafeMethodCall(span, receiver, name, args) {
         var _this = _super.call(this, span) || this;
         _this.receiver = receiver;
@@ -18901,7 +18901,7 @@ var SafeMethodCall = /** @class */ (function (_super) {
     return SafeMethodCall;
 }(AST));
 var FunctionCall = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(FunctionCall, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(FunctionCall, _super);
     function FunctionCall(span, target, args) {
         var _this = _super.call(this, span) || this;
         _this.target = target;
@@ -18925,7 +18925,7 @@ var FunctionCall = /** @class */ (function (_super) {
     return FunctionCall;
 }(AST));
 var ASTWithSource = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(ASTWithSource, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(ASTWithSource, _super);
     function ASTWithSource(ast, source, location, errors) {
         var _this = _super.call(this, new ParseSpan(0, source == null ? 0 : source.length)) || this;
         _this.ast = ast;
@@ -21532,7 +21532,7 @@ var Token$1 = /** @class */ (function () {
     return Token;
 }());
 var TokenError = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(TokenError, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(TokenError, _super);
     function TokenError(errorMsg, tokenType, span) {
         var _this = _super.call(this, span, errorMsg) || this;
         _this.tokenType = tokenType;
@@ -22536,7 +22536,7 @@ function mergeTextTokens(srcTokens) {
  * found in the LICENSE file at https://angular.io/license
  */
 var TreeError = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(TreeError, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(TreeError, _super);
     function TreeError(elementName, span, msg) {
         var _this = _super.call(this, span, msg) || this;
         _this.elementName = elementName;
@@ -23214,7 +23214,7 @@ function serializeNodes(nodes) {
  * \@internal
  */
 var _SerializerIgnoreIcuExpVisitor = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(_SerializerIgnoreIcuExpVisitor, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(_SerializerIgnoreIcuExpVisitor, _super);
     function _SerializerIgnoreIcuExpVisitor() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
@@ -24441,7 +24441,7 @@ function _extractPlaceholderName(input) {
  * An i18n error.
  */
 var I18nError = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(I18nError, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(I18nError, _super);
     function I18nError(span, msg) {
         return _super.call(this, span, msg) || this;
     }
@@ -25127,7 +25127,7 @@ function getXmlTagDefinition(tagName) {
  * found in the LICENSE file at https://angular.io/license
  */
 var XmlParser = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(XmlParser, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(XmlParser, _super);
     function XmlParser() {
         return _super.call(this, getXmlTagDefinition) || this;
     }
@@ -25192,7 +25192,7 @@ var Serializer = /** @class */ (function () {
  * A simple mapper that take a function to transform an internal name to a public name
  */
 var SimplePlaceholderMapper = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(SimplePlaceholderMapper, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(SimplePlaceholderMapper, _super);
     // create a mapping from the message
     function SimplePlaceholderMapper(message, mapName) {
         var _this = _super.call(this) || this;
@@ -25472,7 +25472,7 @@ var Text$2 = /** @class */ (function () {
     return Text;
 }());
 var CR = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(CR, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(CR, _super);
     function CR(ws) {
         if (ws === void 0) { ws = 0; }
         return _super.call(this, "\n" + new Array(ws + 1).join(' ')) || this;
@@ -25519,7 +25519,7 @@ var _UNIT_TAG = 'trans-unit';
 var _CONTEXT_GROUP_TAG = 'context-group';
 var _CONTEXT_TAG = 'context';
 var Xliff = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(Xliff, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(Xliff, _super);
     function Xliff() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
@@ -26035,7 +26035,7 @@ var _SOURCE_TAG$1 = 'source';
 var _TARGET_TAG$1 = 'target';
 var _UNIT_TAG$1 = 'unit';
 var Xliff2 = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(Xliff2, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(Xliff2, _super);
     function Xliff2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
@@ -26600,7 +26600,7 @@ var _EXEMPLE_TAG = 'ex';
 var _SOURCE_TAG$2 = 'source';
 var _DOCTYPE = "<!ELEMENT messagebundle (msg)*>\n<!ATTLIST messagebundle class CDATA #IMPLIED>\n\n<!ELEMENT msg (#PCDATA|ph|source)*>\n<!ATTLIST msg id CDATA #IMPLIED>\n<!ATTLIST msg seq CDATA #IMPLIED>\n<!ATTLIST msg name CDATA #IMPLIED>\n<!ATTLIST msg desc CDATA #IMPLIED>\n<!ATTLIST msg meaning CDATA #IMPLIED>\n<!ATTLIST msg obsolete (obsolete) #IMPLIED>\n<!ATTLIST msg xml:space (default|preserve) \"default\">\n<!ATTLIST msg is_hidden CDATA #IMPLIED>\n\n<!ELEMENT source (#PCDATA)>\n\n<!ELEMENT ph (#PCDATA|ex)*>\n<!ATTLIST ph name CDATA #REQUIRED>\n\n<!ELEMENT ex (#PCDATA)>";
 var Xmb = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(Xmb, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(Xmb, _super);
     function Xmb() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
@@ -26887,7 +26887,7 @@ var _TRANSLATIONS_TAG = 'translationbundle';
 var _TRANSLATION_TAG = 'translation';
 var _PLACEHOLDER_TAG$3 = 'ph';
 var Xtb = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(Xtb, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(Xtb, _super);
     function Xtb() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
@@ -27263,7 +27263,7 @@ var XmlToI18n$2 = /** @class */ (function () {
  * found in the LICENSE file at https://angular.io/license
  */
 var HtmlParser = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(HtmlParser, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(HtmlParser, _super);
     function HtmlParser() {
         return _super.call(this, getHtmlTagDefinition) || this;
     }
@@ -29949,7 +29949,7 @@ function extractIdentifiers(value, targetIdentifiers) {
     visitValue(value, new _CompileValueConverter(), targetIdentifiers);
 }
 var _CompileValueConverter = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(_CompileValueConverter, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(_CompileValueConverter, _super);
     function _CompileValueConverter() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
@@ -30047,7 +30047,7 @@ BuiltinTypeName[BuiltinTypeName.Number] = "Number";
 BuiltinTypeName[BuiltinTypeName.Function] = "Function";
 BuiltinTypeName[BuiltinTypeName.Inferred] = "Inferred";
 var BuiltinType = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(BuiltinType, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(BuiltinType, _super);
     function BuiltinType(name, modifiers) {
         if (modifiers === void 0) { modifiers = null; }
         var _this = _super.call(this, modifiers) || this;
@@ -30070,7 +30070,7 @@ var BuiltinType = /** @class */ (function (_super) {
     return BuiltinType;
 }(Type$1));
 var ExpressionType = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(ExpressionType, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(ExpressionType, _super);
     function ExpressionType(value, modifiers) {
         if (modifiers === void 0) { modifiers = null; }
         var _this = _super.call(this, modifiers) || this;
@@ -30093,7 +30093,7 @@ var ExpressionType = /** @class */ (function (_super) {
     return ExpressionType;
 }(Type$1));
 var ArrayType = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(ArrayType, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(ArrayType, _super);
     function ArrayType(of, modifiers) {
         if (modifiers === void 0) { modifiers = null; }
         var _this = _super.call(this, modifiers) || this;
@@ -30116,7 +30116,7 @@ var ArrayType = /** @class */ (function (_super) {
     return ArrayType;
 }(Type$1));
 var MapType = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(MapType, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(MapType, _super);
     function MapType(valueType, modifiers) {
         if (modifiers === void 0) { modifiers = null; }
         var _this = _super.call(this, modifiers) || this;
@@ -30547,7 +30547,7 @@ BuiltinVar[BuiltinVar.Super] = "Super";
 BuiltinVar[BuiltinVar.CatchError] = "CatchError";
 BuiltinVar[BuiltinVar.CatchStack] = "CatchStack";
 var ReadVarExpr = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(ReadVarExpr, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(ReadVarExpr, _super);
     function ReadVarExpr(name, type, sourceSpan) {
         var _this = _super.call(this, type, sourceSpan) || this;
         if (typeof name === 'string') {
@@ -30601,7 +30601,7 @@ var ReadVarExpr = /** @class */ (function (_super) {
     return ReadVarExpr;
 }(Expression));
 var WriteVarExpr = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(WriteVarExpr, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(WriteVarExpr, _super);
     function WriteVarExpr(name, value, type, sourceSpan) {
         var _this = _super.call(this, type || value.type, sourceSpan) || this;
         _this.name = name;
@@ -30648,7 +30648,7 @@ var WriteVarExpr = /** @class */ (function (_super) {
     return WriteVarExpr;
 }(Expression));
 var WriteKeyExpr = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(WriteKeyExpr, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(WriteKeyExpr, _super);
     function WriteKeyExpr(receiver, index, value, type, sourceSpan) {
         var _this = _super.call(this, type || value.type, sourceSpan) || this;
         _this.receiver = receiver;
@@ -30684,7 +30684,7 @@ var WriteKeyExpr = /** @class */ (function (_super) {
     return WriteKeyExpr;
 }(Expression));
 var WritePropExpr = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(WritePropExpr, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(WritePropExpr, _super);
     function WritePropExpr(receiver, name, value, type, sourceSpan) {
         var _this = _super.call(this, type || value.type, sourceSpan) || this;
         _this.receiver = receiver;
@@ -30729,7 +30729,7 @@ BuiltinMethod[BuiltinMethod.ConcatArray] = "ConcatArray";
 BuiltinMethod[BuiltinMethod.SubscribeObservable] = "SubscribeObservable";
 BuiltinMethod[BuiltinMethod.Bind] = "Bind";
 var InvokeMethodExpr = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(InvokeMethodExpr, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(InvokeMethodExpr, _super);
     function InvokeMethodExpr(receiver, method, args, type, sourceSpan) {
         var _this = _super.call(this, type, sourceSpan) || this;
         _this.receiver = receiver;
@@ -30772,7 +30772,7 @@ var InvokeMethodExpr = /** @class */ (function (_super) {
     return InvokeMethodExpr;
 }(Expression));
 var InvokeFunctionExpr = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(InvokeFunctionExpr, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(InvokeFunctionExpr, _super);
     function InvokeFunctionExpr(fn, args, type, sourceSpan) {
         var _this = _super.call(this, type, sourceSpan) || this;
         _this.fn = fn;
@@ -30807,7 +30807,7 @@ var InvokeFunctionExpr = /** @class */ (function (_super) {
     return InvokeFunctionExpr;
 }(Expression));
 var InstantiateExpr = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(InstantiateExpr, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(InstantiateExpr, _super);
     function InstantiateExpr(classExpr, args, type, sourceSpan) {
         var _this = _super.call(this, type, sourceSpan) || this;
         _this.classExpr = classExpr;
@@ -30842,7 +30842,7 @@ var InstantiateExpr = /** @class */ (function (_super) {
     return InstantiateExpr;
 }(Expression));
 var LiteralExpr = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(LiteralExpr, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(LiteralExpr, _super);
     function LiteralExpr(value, type, sourceSpan) {
         var _this = _super.call(this, type, sourceSpan) || this;
         _this.value = value;
@@ -30875,7 +30875,7 @@ var LiteralExpr = /** @class */ (function (_super) {
     return LiteralExpr;
 }(Expression));
 var ExternalExpr = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(ExternalExpr, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(ExternalExpr, _super);
     function ExternalExpr(value, type, typeParams, sourceSpan) {
         if (typeParams === void 0) { typeParams = null; }
         var _this = _super.call(this, type, sourceSpan) || this;
@@ -30919,7 +30919,7 @@ var ExternalReference = /** @class */ (function () {
     return ExternalReference;
 }());
 var ConditionalExpr = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(ConditionalExpr, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(ConditionalExpr, _super);
     function ConditionalExpr(condition, trueCase, falseCase, type, sourceSpan) {
         if (falseCase === void 0) { falseCase = null; }
         var _this = _super.call(this, type || trueCase.type, sourceSpan) || this;
@@ -30956,7 +30956,7 @@ var ConditionalExpr = /** @class */ (function (_super) {
     return ConditionalExpr;
 }(Expression));
 var NotExpr = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(NotExpr, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(NotExpr, _super);
     function NotExpr(condition, sourceSpan) {
         var _this = _super.call(this, BOOL_TYPE, sourceSpan) || this;
         _this.condition = condition;
@@ -30989,7 +30989,7 @@ var NotExpr = /** @class */ (function (_super) {
     return NotExpr;
 }(Expression));
 var AssertNotNull = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(AssertNotNull, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(AssertNotNull, _super);
     function AssertNotNull(condition, sourceSpan) {
         var _this = _super.call(this, condition.type, sourceSpan) || this;
         _this.condition = condition;
@@ -31022,7 +31022,7 @@ var AssertNotNull = /** @class */ (function (_super) {
     return AssertNotNull;
 }(Expression));
 var CastExpr = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(CastExpr, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(CastExpr, _super);
     function CastExpr(value, type, sourceSpan) {
         var _this = _super.call(this, type, sourceSpan) || this;
         _this.value = value;
@@ -31072,7 +31072,7 @@ var FnParam = /** @class */ (function () {
     return FnParam;
 }());
 var FunctionExpr = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(FunctionExpr, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(FunctionExpr, _super);
     function FunctionExpr(params, statements, type, sourceSpan) {
         var _this = _super.call(this, type, sourceSpan) || this;
         _this.params = params;
@@ -31121,7 +31121,7 @@ var FunctionExpr = /** @class */ (function (_super) {
     return FunctionExpr;
 }(Expression));
 var BinaryOperatorExpr = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(BinaryOperatorExpr, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(BinaryOperatorExpr, _super);
     function BinaryOperatorExpr(operator, lhs, rhs, type, sourceSpan) {
         var _this = _super.call(this, type || lhs.type, sourceSpan) || this;
         _this.operator = operator;
@@ -31157,7 +31157,7 @@ var BinaryOperatorExpr = /** @class */ (function (_super) {
     return BinaryOperatorExpr;
 }(Expression));
 var ReadPropExpr = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(ReadPropExpr, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(ReadPropExpr, _super);
     function ReadPropExpr(receiver, name, type, sourceSpan) {
         var _this = _super.call(this, type, sourceSpan) || this;
         _this.receiver = receiver;
@@ -31203,7 +31203,7 @@ var ReadPropExpr = /** @class */ (function (_super) {
     return ReadPropExpr;
 }(Expression));
 var ReadKeyExpr = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(ReadKeyExpr, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(ReadKeyExpr, _super);
     function ReadKeyExpr(receiver, index, type, sourceSpan) {
         var _this = _super.call(this, type, sourceSpan) || this;
         _this.receiver = receiver;
@@ -31249,7 +31249,7 @@ var ReadKeyExpr = /** @class */ (function (_super) {
     return ReadKeyExpr;
 }(Expression));
 var LiteralArrayExpr = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(LiteralArrayExpr, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(LiteralArrayExpr, _super);
     function LiteralArrayExpr(entries, type, sourceSpan) {
         var _this = _super.call(this, type, sourceSpan) || this;
         _this.entries = entries;
@@ -31301,7 +31301,7 @@ var LiteralMapEntry = /** @class */ (function () {
     return LiteralMapEntry;
 }());
 var LiteralMapExpr = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(LiteralMapExpr, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(LiteralMapExpr, _super);
     function LiteralMapExpr(entries, type, sourceSpan) {
         var _this = _super.call(this, type, sourceSpan) || this;
         _this.entries = entries;
@@ -31338,7 +31338,7 @@ var LiteralMapExpr = /** @class */ (function (_super) {
     return LiteralMapExpr;
 }(Expression));
 var CommaExpr = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(CommaExpr, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(CommaExpr, _super);
     function CommaExpr(parts, sourceSpan) {
         var _this = _super.call(this, parts[parts.length - 1].type, sourceSpan) || this;
         _this.parts = parts;
@@ -31409,7 +31409,7 @@ var Statement = /** @class */ (function () {
     return Statement;
 }());
 var DeclareVarStmt = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(DeclareVarStmt, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(DeclareVarStmt, _super);
     function DeclareVarStmt(name, value, type, modifiers, sourceSpan) {
         if (modifiers === void 0) { modifiers = null; }
         var _this = _super.call(this, modifiers, sourceSpan) || this;
@@ -31446,7 +31446,7 @@ var DeclareVarStmt = /** @class */ (function (_super) {
     return DeclareVarStmt;
 }(Statement));
 var DeclareFunctionStmt = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(DeclareFunctionStmt, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(DeclareFunctionStmt, _super);
     function DeclareFunctionStmt(name, params, statements, type, modifiers, sourceSpan) {
         if (modifiers === void 0) { modifiers = null; }
         var _this = _super.call(this, modifiers, sourceSpan) || this;
@@ -31484,7 +31484,7 @@ var DeclareFunctionStmt = /** @class */ (function (_super) {
     return DeclareFunctionStmt;
 }(Statement));
 var ExpressionStatement = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(ExpressionStatement, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(ExpressionStatement, _super);
     function ExpressionStatement(expr, sourceSpan) {
         var _this = _super.call(this, null, sourceSpan) || this;
         _this.expr = expr;
@@ -31517,7 +31517,7 @@ var ExpressionStatement = /** @class */ (function (_super) {
     return ExpressionStatement;
 }(Statement));
 var ReturnStatement = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(ReturnStatement, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(ReturnStatement, _super);
     function ReturnStatement(value, sourceSpan) {
         var _this = _super.call(this, null, sourceSpan) || this;
         _this.value = value;
@@ -31569,7 +31569,7 @@ var AbstractClassPart = /** @class */ (function () {
     return AbstractClassPart;
 }());
 var ClassField = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(ClassField, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(ClassField, _super);
     function ClassField(name, type, modifiers) {
         if (modifiers === void 0) { modifiers = null; }
         var _this = _super.call(this, type, modifiers) || this;
@@ -31588,7 +31588,7 @@ var ClassField = /** @class */ (function (_super) {
     return ClassField;
 }(AbstractClassPart));
 var ClassMethod = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(ClassMethod, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(ClassMethod, _super);
     function ClassMethod(name, params, body, type, modifiers) {
         if (modifiers === void 0) { modifiers = null; }
         var _this = _super.call(this, type, modifiers) || this;
@@ -31611,7 +31611,7 @@ var ClassMethod = /** @class */ (function (_super) {
     return ClassMethod;
 }(AbstractClassPart));
 var ClassGetter = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(ClassGetter, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(ClassGetter, _super);
     function ClassGetter(name, body, type, modifiers) {
         if (modifiers === void 0) { modifiers = null; }
         var _this = _super.call(this, type, modifiers) || this;
@@ -31633,7 +31633,7 @@ var ClassGetter = /** @class */ (function (_super) {
     return ClassGetter;
 }(AbstractClassPart));
 var ClassStmt = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(ClassStmt, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(ClassStmt, _super);
     function ClassStmt(name, parent, fields, getters, constructorMethod, methods, modifiers, sourceSpan) {
         if (modifiers === void 0) { modifiers = null; }
         var _this = _super.call(this, modifiers, sourceSpan) || this;
@@ -31677,7 +31677,7 @@ var ClassStmt = /** @class */ (function (_super) {
     return ClassStmt;
 }(Statement));
 var IfStmt = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(IfStmt, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(IfStmt, _super);
     function IfStmt(condition, trueCase, falseCase, sourceSpan) {
         if (falseCase === void 0) { falseCase = []; }
         var _this = _super.call(this, null, sourceSpan) || this;
@@ -31715,7 +31715,7 @@ var IfStmt = /** @class */ (function (_super) {
     return IfStmt;
 }(Statement));
 var CommentStmt = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(CommentStmt, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(CommentStmt, _super);
     function CommentStmt(comment, sourceSpan) {
         var _this = _super.call(this, null, sourceSpan) || this;
         _this.comment = comment;
@@ -31746,7 +31746,7 @@ var CommentStmt = /** @class */ (function (_super) {
     return CommentStmt;
 }(Statement));
 var TryCatchStmt = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(TryCatchStmt, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(TryCatchStmt, _super);
     function TryCatchStmt(bodyStmts, catchStmts, sourceSpan) {
         var _this = _super.call(this, null, sourceSpan) || this;
         _this.bodyStmts = bodyStmts;
@@ -31781,7 +31781,7 @@ var TryCatchStmt = /** @class */ (function (_super) {
     return TryCatchStmt;
 }(Statement));
 var ThrowStmt = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(ThrowStmt, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(ThrowStmt, _super);
     function ThrowStmt(error, sourceSpan) {
         var _this = _super.call(this, null, sourceSpan) || this;
         _this.error = error;
@@ -32808,7 +32808,7 @@ function findReadVarNames(stmts) {
     return visitor.varNames;
 }
 var _ReadVarVisitor = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(_ReadVarVisitor, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(_ReadVarVisitor, _super);
     function _ReadVarVisitor() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
         _this.varNames = new Set();
@@ -32870,7 +32870,7 @@ function collectExternalReferences(stmts) {
     return visitor.externalReferences;
 }
 var _FindExternalReferencesVisitor = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(_FindExternalReferencesVisitor, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(_FindExternalReferencesVisitor, _super);
     function _FindExternalReferencesVisitor() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
         _this.externalReferences = [];
@@ -32917,7 +32917,7 @@ function applySourceSpanToExpressionIfNeeded(expr, sourceSpan) {
     return expr.visitExpression(transformer, null);
 }
 var _ApplySourceSpanTransformer = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(_ApplySourceSpanTransformer, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(_ApplySourceSpanTransformer, _super);
     function _ApplySourceSpanTransformer(sourceSpan) {
         var _this = _super.call(this) || this;
         _this.sourceSpan = sourceSpan;
@@ -33079,7 +33079,7 @@ function literal(value, type, sourceSpan) {
  * found in the LICENSE file at https://angular.io/license
  */
 var ProviderError = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(ProviderError, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(ProviderError, _super);
     function ProviderError(message, span) {
         return _super.call(this, span, message) || this;
     }
@@ -35363,7 +35363,7 @@ var TypeScriptEmitter = /** @class */ (function () {
     return TypeScriptEmitter;
 }());
 var _TsEmitterVisitor = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(_TsEmitterVisitor, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(_TsEmitterVisitor, _super);
     function _TsEmitterVisitor(referenceFilter) {
         var _this = _super.call(this, false) || this;
         _this.referenceFilter = referenceFilter;
@@ -36286,7 +36286,7 @@ var _ATTR_TO_PROP = {
     'tabindex': 'tabIndex',
 };
 var DomElementSchemaRegistry = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(DomElementSchemaRegistry, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(DomElementSchemaRegistry, _super);
     function DomElementSchemaRegistry() {
         var _this = _super.call(this) || this;
         _this._schema = {};
@@ -37677,7 +37677,7 @@ var ExpansionResult = /** @class */ (function () {
     return ExpansionResult;
 }());
 var ExpansionError = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(ExpansionError, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(ExpansionError, _super);
     function ExpansionError(span, errorMsg) {
         return _super.call(this, span, errorMsg) || this;
     }
@@ -38417,7 +38417,7 @@ var BindingParser = /** @class */ (function () {
     return BindingParser;
 }());
 var PipeCollector = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(PipeCollector, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(PipeCollector, _super);
     function PipeCollector() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
         _this.pipes = new Map();
@@ -38523,7 +38523,7 @@ function warnOnlyOnce(warnings) {
     };
 }
 var TemplateParseError = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(TemplateParseError, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(TemplateParseError, _super);
     function TemplateParseError(message, span, level) {
         return _super.call(this, span, message, level) || this;
     }
@@ -39880,7 +39880,7 @@ function convertToStatementIfNeeded(mode, expr) {
     }
 }
 var _BuiltinAstConverter = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(_BuiltinAstConverter, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(_BuiltinAstConverter, _super);
     function _BuiltinAstConverter(_converterFactory) {
         var _this = _super.call(this) || this;
         _this._converterFactory = _converterFactory;
@@ -40779,7 +40779,7 @@ function convertStmtIntoExpression(stmt) {
     return null;
 }
 var BuiltinFunctionCall = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(BuiltinFunctionCall, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(BuiltinFunctionCall, _super);
     function BuiltinFunctionCall(span, args, converter) {
         var _this = _super.call(this, span, null, args) || this;
         _this.args = args;
@@ -42724,7 +42724,7 @@ var MessageBundle = /** @class */ (function () {
     return MessageBundle;
 }());
 var MapPlaceholderNames = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(MapPlaceholderNames, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(MapPlaceholderNames, _super);
     function MapPlaceholderNames() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
@@ -43461,7 +43461,7 @@ var StaticSymbolResolver = /** @class */ (function () {
         };
         var /** @type {?} */ self = this;
         var ReferenceTransformer = /** @class */ (function (_super) {
-            Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(ReferenceTransformer, _super);
+            Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(ReferenceTransformer, _super);
             function ReferenceTransformer() {
                 return _super !== null && _super.apply(this, arguments) || this;
             }
@@ -43751,7 +43751,7 @@ function createSummaryForJitFunction(outputCtx, reference, value) {
     ]));
 }
 var ToJsonSerializer = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(ToJsonSerializer, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(ToJsonSerializer, _super);
     function ToJsonSerializer(symbolResolver, summaryResolver, srcFileName) {
         var _this = _super.call(this) || this;
         _this.symbolResolver = symbolResolver;
@@ -44202,7 +44202,7 @@ var ForJitSerializer = /** @class */ (function () {
     return ForJitSerializer;
 }());
 var FromJsonDeserializer = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(FromJsonDeserializer, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(FromJsonDeserializer, _super);
     function FromJsonDeserializer(symbolCache, summaryResolver) {
         var _this = _super.call(this) || this;
         _this.symbolCache = symbolCache;
@@ -46554,7 +46554,7 @@ var BindingScope = /** @class */ (function () {
     return BindingScope;
 }());
 var PopulatedScope = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(PopulatedScope, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(PopulatedScope, _super);
     function PopulatedScope(bindings) {
         var _this = _super.call(this) || this;
         _this.bindings = bindings;
@@ -47663,7 +47663,7 @@ var CATCH_STACK_VAR$2 = 'stack';
  * @abstract
  */
 var AbstractJsEmitterVisitor = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(AbstractJsEmitterVisitor, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(AbstractJsEmitterVisitor, _super);
     function AbstractJsEmitterVisitor() {
         return _super.call(this, false) || this;
     }
@@ -48000,7 +48000,7 @@ function jitStatements(sourceUrl, statements, reflector, createSourceMaps) {
     return evalExpression(sourceUrl, ctx, converter.getArgs(), createSourceMaps);
 }
 var JitEmitterVisitor = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(JitEmitterVisitor, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(JitEmitterVisitor, _super);
     function JitEmitterVisitor(reflector) {
         var _this = _super.call(this) || this;
         _this.reflector = reflector;
@@ -53392,7 +53392,7 @@ var CodegenComponentFactoryResolver = /** @class */ (function () {
  * @template C
  */
 var ComponentFactoryBoundToModule = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(ComponentFactoryBoundToModule, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(ComponentFactoryBoundToModule, _super);
     function ComponentFactoryBoundToModule(factory, ngModule) {
         var _this = _super.call(this) || this;
         _this.factory = factory;
@@ -53689,7 +53689,7 @@ var wtfEndTimeRange = wtfEnabled ? endTimeRange : function (r) { return null; };
  * @template T
  */
 var EventEmitter = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(EventEmitter, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(EventEmitter, _super);
     /**
      * Creates an instance of {@link EventEmitter}, which depending on `isAsync`,
      * delivers events synchronously or asynchronously.
@@ -56110,7 +56110,7 @@ var ChangeDetectorRef = /** @class */ (function () {
  * @abstract
  */
 var ViewRef = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(ViewRef, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(ViewRef, _super);
     function ViewRef() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
@@ -56173,7 +56173,7 @@ var ViewRef = /** @class */ (function (_super) {
  * @template C
  */
 var EmbeddedViewRef = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(EmbeddedViewRef, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(EmbeddedViewRef, _super);
     function EmbeddedViewRef() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
@@ -56274,7 +56274,7 @@ var DebugNode = /** @class */ (function () {
  * \@experimental All debugging apis are currently experimental.
  */
 var DebugElement = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(DebugElement, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(DebugElement, _super);
     function DebugElement(nativeNode, parent, _debugContext) {
         var _this = _super.call(this, nativeNode, parent, _debugContext) || this;
         _this.properties = {};
@@ -60597,7 +60597,7 @@ function getComponentViewDefinitionFactory(componentFactory) {
     return (/** @type {?} */ (componentFactory)).viewDefFactory;
 }
 var ComponentFactory_ = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(ComponentFactory_, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(ComponentFactory_, _super);
     function ComponentFactory_(selector, componentType, viewDefFactory, _inputs, _outputs, ngContentSelectors) {
         var _this = 
         // Attention: this ctor is called as top level function.
@@ -60677,7 +60677,7 @@ var ComponentFactory_ = /** @class */ (function (_super) {
     return ComponentFactory_;
 }(ComponentFactory));
 var ComponentRef_ = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(ComponentRef_, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(ComponentRef_, _super);
     function ComponentRef_(_view, _viewRef, _component) {
         var _this = _super.call(this) || this;
         _this._view = _view;
@@ -61109,7 +61109,7 @@ function createTemplateData(view, def) {
     return new TemplateRef_(view, def);
 }
 var TemplateRef_ = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(TemplateRef_, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(TemplateRef_, _super);
     function TemplateRef_(_parentView, _def) {
         var _this = _super.call(this) || this;
         _this._parentView = _parentView;
@@ -64943,7 +64943,7 @@ function createNgModuleFactory(ngModuleType, bootstrapComponents, defFactory) {
     return new NgModuleFactory_(ngModuleType, bootstrapComponents, defFactory);
 }
 var NgModuleFactory_ = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(NgModuleFactory_, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(NgModuleFactory_, _super);
     function NgModuleFactory_(moduleType, _bootstrapComponents, _ngModuleDefFactory) {
         var _this = 
         // Attention: this ctor is called as top level function.
@@ -69387,7 +69387,7 @@ var ResponseOptions = /** @class */ (function () {
  * @deprecated use \@angular/common/http instead
  */
 var BaseResponseOptions = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_1_tslib__["b" /* __extends */])(BaseResponseOptions, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_1_tslib__["c" /* __extends */])(BaseResponseOptions, _super);
     function BaseResponseOptions() {
         return _super.call(this, { status: 200, statusText: 'Ok', type: ResponseType.Default, headers: new Headers() }) || this;
     }
@@ -70010,7 +70010,7 @@ var Body = /** @class */ (function () {
  * @deprecated use \@angular/common/http instead
  */
 var Response = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_1_tslib__["b" /* __extends */])(Response, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_1_tslib__["c" /* __extends */])(Response, _super);
     function Response(responseOptions) {
         var _this = _super.call(this) || this;
         _this._body = responseOptions.body;
@@ -70267,7 +70267,7 @@ var JSONPConnection = /** @class */ (function () {
  * @deprecated use \@angular/common/http instead
  */
 var JSONPBackend = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_1_tslib__["b" /* __extends */])(JSONPBackend, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_1_tslib__["c" /* __extends */])(JSONPBackend, _super);
     /** @internal */
     function JSONPBackend(_browserJSONP, _baseResponseOptions) {
         var _this = _super.call(this) || this;
@@ -70804,7 +70804,7 @@ var RequestOptions = /** @class */ (function () {
  * @deprecated use \@angular/common/http instead
  */
 var BaseRequestOptions = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_1_tslib__["b" /* __extends */])(BaseRequestOptions, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_1_tslib__["c" /* __extends */])(BaseRequestOptions, _super);
     function BaseRequestOptions() {
         return _super.call(this, { method: RequestMethod.Get, headers: new Headers() }) || this;
     }
@@ -70867,7 +70867,7 @@ var BaseRequestOptions = /** @class */ (function (_super) {
  * @deprecated use \@angular/common/http instead
  */
 var Request = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_1_tslib__["b" /* __extends */])(Request, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_1_tslib__["c" /* __extends */])(Request, _super);
     function Request(requestOptions) {
         var _this = _super.call(this) || this;
         // TODO: assert that url is present
@@ -71314,7 +71314,7 @@ var Http = /** @class */ (function () {
  * @deprecated use \@angular/common/http instead
  */
 var Jsonp = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_1_tslib__["b" /* __extends */])(Jsonp, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_1_tslib__["c" /* __extends */])(Jsonp, _super);
     function Jsonp(backend, defaultOptions) {
         return _super.call(this, backend, defaultOptions) || this;
     }
@@ -72063,7 +72063,7 @@ var platformCoreDynamic = Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["cr
  * @suppress {checkTypes} checked by tsc
  */
 var ResourceLoaderImpl = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_4_tslib__["b" /* __extends */])(ResourceLoaderImpl, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_4_tslib__["c" /* __extends */])(ResourceLoaderImpl, _super);
     function ResourceLoaderImpl() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
@@ -72157,7 +72157,7 @@ var INTERNAL_BROWSER_DYNAMIC_PLATFORM_PROVIDERS = [
  * via a separate mechanism.
  */
 var CachedResourceLoader = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_4_tslib__["b" /* __extends */])(CachedResourceLoader, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_4_tslib__["c" /* __extends */])(CachedResourceLoader, _super);
     function CachedResourceLoader() {
         var _this = _super.call(this) || this;
         _this._cache = (/** @type {?} */ (__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵglobal"])).$templateCache;
@@ -72414,7 +72414,7 @@ var DomAdapter = /** @class */ (function () {
  * @abstract
  */
 var GenericBrowserDomAdapter = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["b" /* __extends */])(GenericBrowserDomAdapter, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["c" /* __extends */])(GenericBrowserDomAdapter, _super);
     function GenericBrowserDomAdapter() {
         var _this = _super.call(this) || this;
         _this._animationPrefix = null;
@@ -72587,7 +72587,7 @@ if (__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵglobal"]['Node']) {
  * can introduce XSS risks.
  */
 var BrowserDomAdapter = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["b" /* __extends */])(BrowserDomAdapter, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["c" /* __extends */])(BrowserDomAdapter, _super);
     function BrowserDomAdapter() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
@@ -73977,7 +73977,7 @@ function supportsState() {
  * {\@link Location}.
  */
 var BrowserPlatformLocation = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["b" /* __extends */])(BrowserPlatformLocation, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["c" /* __extends */])(BrowserPlatformLocation, _super);
     function BrowserPlatformLocation(_doc) {
         var _this = _super.call(this) || this;
         _this._doc = _doc;
@@ -74810,7 +74810,7 @@ var SharedStylesHost = /** @class */ (function () {
     return SharedStylesHost;
 }());
 var DomSharedStylesHost = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["b" /* __extends */])(DomSharedStylesHost, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["c" /* __extends */])(DomSharedStylesHost, _super);
     function DomSharedStylesHost(_doc) {
         var _this = _super.call(this) || this;
         _this._doc = _doc;
@@ -75329,7 +75329,7 @@ function checkNoSyntheticProp(name, nameKind) {
     }
 }
 var EmulatedEncapsulationDomRenderer2 = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["b" /* __extends */])(EmulatedEncapsulationDomRenderer2, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["c" /* __extends */])(EmulatedEncapsulationDomRenderer2, _super);
     function EmulatedEncapsulationDomRenderer2(eventManager, sharedStylesHost, component) {
         var _this = _super.call(this, eventManager) || this;
         _this.component = component;
@@ -75366,7 +75366,7 @@ var EmulatedEncapsulationDomRenderer2 = /** @class */ (function (_super) {
     return EmulatedEncapsulationDomRenderer2;
 }(DefaultDomRenderer2));
 var ShadowDomRenderer = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["b" /* __extends */])(ShadowDomRenderer, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["c" /* __extends */])(ShadowDomRenderer, _super);
     function ShadowDomRenderer(eventManager, sharedStylesHost, hostEl, component) {
         var _this = _super.call(this, eventManager) || this;
         _this.sharedStylesHost = sharedStylesHost;
@@ -75541,7 +75541,7 @@ var globalListener = function (event) {
     }
 };
 var DomEventsPlugin = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["b" /* __extends */])(DomEventsPlugin, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["c" /* __extends */])(DomEventsPlugin, _super);
     function DomEventsPlugin(doc, ngZone) {
         var _this = _super.call(this, doc) || this;
         _this.ngZone = ngZone;
@@ -75803,7 +75803,7 @@ var HammerGestureConfig = /** @class */ (function () {
     return HammerGestureConfig;
 }());
 var HammerGesturesPlugin = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["b" /* __extends */])(HammerGesturesPlugin, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["c" /* __extends */])(HammerGesturesPlugin, _super);
     function HammerGesturesPlugin(doc, _config) {
         var _this = _super.call(this, doc) || this;
         _this._config = _config;
@@ -75898,7 +75898,7 @@ var MODIFIER_KEY_GETTERS = {
  * \@experimental
  */
 var KeyEventsPlugin = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["b" /* __extends */])(KeyEventsPlugin, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["c" /* __extends */])(KeyEventsPlugin, _super);
     function KeyEventsPlugin(doc) {
         return _super.call(this, doc) || this;
     }
@@ -76777,7 +76777,7 @@ var DomSanitizer = /** @class */ (function () {
     return DomSanitizer;
 }());
 var DomSanitizerImpl = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["b" /* __extends */])(DomSanitizerImpl, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["c" /* __extends */])(DomSanitizerImpl, _super);
     function DomSanitizerImpl(_doc) {
         var _this = _super.call(this) || this;
         _this._doc = _doc;
@@ -76924,7 +76924,7 @@ var SafeValueImpl = /** @class */ (function () {
     return SafeValueImpl;
 }());
 var SafeHtmlImpl = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["b" /* __extends */])(SafeHtmlImpl, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["c" /* __extends */])(SafeHtmlImpl, _super);
     function SafeHtmlImpl() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
@@ -76938,7 +76938,7 @@ var SafeHtmlImpl = /** @class */ (function (_super) {
     return SafeHtmlImpl;
 }(SafeValueImpl));
 var SafeStyleImpl = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["b" /* __extends */])(SafeStyleImpl, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["c" /* __extends */])(SafeStyleImpl, _super);
     function SafeStyleImpl() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
@@ -76952,7 +76952,7 @@ var SafeStyleImpl = /** @class */ (function (_super) {
     return SafeStyleImpl;
 }(SafeValueImpl));
 var SafeScriptImpl = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["b" /* __extends */])(SafeScriptImpl, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["c" /* __extends */])(SafeScriptImpl, _super);
     function SafeScriptImpl() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
@@ -76966,7 +76966,7 @@ var SafeScriptImpl = /** @class */ (function (_super) {
     return SafeScriptImpl;
 }(SafeValueImpl));
 var SafeUrlImpl = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["b" /* __extends */])(SafeUrlImpl, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["c" /* __extends */])(SafeUrlImpl, _super);
     function SafeUrlImpl() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
@@ -76980,7 +76980,7 @@ var SafeUrlImpl = /** @class */ (function (_super) {
     return SafeUrlImpl;
 }(SafeValueImpl));
 var SafeResourceUrlImpl = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["b" /* __extends */])(SafeResourceUrlImpl, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["c" /* __extends */])(SafeResourceUrlImpl, _super);
     function SafeResourceUrlImpl() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
@@ -77872,7 +77872,7 @@ var RouterEvent = /** @class */ (function () {
  * \@stable
  */
 var NavigationStart = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["b" /* __extends */])(NavigationStart, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["c" /* __extends */])(NavigationStart, _super);
     function NavigationStart() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
@@ -77894,7 +77894,7 @@ var NavigationStart = /** @class */ (function (_super) {
  * \@stable
  */
 var NavigationEnd = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["b" /* __extends */])(NavigationEnd, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["c" /* __extends */])(NavigationEnd, _super);
     function NavigationEnd(/** @docsNotRequired */
         /** @docsNotRequired */
         id, /** @docsNotRequired */
@@ -77924,7 +77924,7 @@ var NavigationEnd = /** @class */ (function (_super) {
  * \@stable
  */
 var NavigationCancel = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["b" /* __extends */])(NavigationCancel, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["c" /* __extends */])(NavigationCancel, _super);
     function NavigationCancel(/** @docsNotRequired */
         /** @docsNotRequired */
         id, /** @docsNotRequired */
@@ -77952,7 +77952,7 @@ var NavigationCancel = /** @class */ (function (_super) {
  * \@stable
  */
 var NavigationError = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["b" /* __extends */])(NavigationError, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["c" /* __extends */])(NavigationError, _super);
     function NavigationError(/** @docsNotRequired */
         /** @docsNotRequired */
         id, /** @docsNotRequired */
@@ -77982,7 +77982,7 @@ var NavigationError = /** @class */ (function (_super) {
  * \@stable
  */
 var RoutesRecognized = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["b" /* __extends */])(RoutesRecognized, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["c" /* __extends */])(RoutesRecognized, _super);
     function RoutesRecognized(/** @docsNotRequired */
         /** @docsNotRequired */
         id, /** @docsNotRequired */
@@ -78013,7 +78013,7 @@ var RoutesRecognized = /** @class */ (function (_super) {
  * \@experimental
  */
 var GuardsCheckStart = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["b" /* __extends */])(GuardsCheckStart, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["c" /* __extends */])(GuardsCheckStart, _super);
     function GuardsCheckStart(/** @docsNotRequired */
         /** @docsNotRequired */
         id, /** @docsNotRequired */
@@ -78041,7 +78041,7 @@ var GuardsCheckStart = /** @class */ (function (_super) {
  * \@experimental
  */
 var GuardsCheckEnd = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["b" /* __extends */])(GuardsCheckEnd, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["c" /* __extends */])(GuardsCheckEnd, _super);
     function GuardsCheckEnd(/** @docsNotRequired */
         /** @docsNotRequired */
         id, /** @docsNotRequired */
@@ -78073,7 +78073,7 @@ var GuardsCheckEnd = /** @class */ (function (_super) {
  * \@experimental
  */
 var ResolveStart = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["b" /* __extends */])(ResolveStart, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["c" /* __extends */])(ResolveStart, _super);
     function ResolveStart(/** @docsNotRequired */
         /** @docsNotRequired */
         id, /** @docsNotRequired */
@@ -78102,7 +78102,7 @@ var ResolveStart = /** @class */ (function (_super) {
  * \@experimental
  */
 var ResolveEnd = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["b" /* __extends */])(ResolveEnd, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["c" /* __extends */])(ResolveEnd, _super);
     function ResolveEnd(/** @docsNotRequired */
         /** @docsNotRequired */
         id, /** @docsNotRequired */
@@ -80403,7 +80403,7 @@ function nodeChildrenAsMap(node) {
  * \@stable
  */
 var RouterState = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["b" /* __extends */])(RouterState, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["c" /* __extends */])(RouterState, _super);
     /** @internal */
     function RouterState(root, snapshot) {
         var _this = _super.call(this, root) || this;
@@ -80776,7 +80776,7 @@ var ActivatedRouteSnapshot = /** @class */ (function () {
  * \@stable
  */
 var RouterStateSnapshot = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["b" /* __extends */])(RouterStateSnapshot, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["c" /* __extends */])(RouterStateSnapshot, _super);
     /** @internal */
     function RouterStateSnapshot(url, root) {
         var _this = _super.call(this, root) || this;

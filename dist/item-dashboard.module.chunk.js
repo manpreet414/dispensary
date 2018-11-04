@@ -145,6 +145,7 @@ module.exports = "<ngx-spinner></ngx-spinner>\n<div class=\"spc-top\"></div>\n<!
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_shared_service__ = __webpack_require__("../../../../../src/app/shared/services/shared.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -157,8 +158,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var AddupdateItemComponent = /** @class */ (function () {
-    function AddupdateItemComponent(_sharedService) {
+    function AddupdateItemComponent(_router, _sharedService) {
+        this._router = _router;
         this._sharedService = _sharedService;
         this.object = {
             name: '',
@@ -226,7 +229,9 @@ var AddupdateItemComponent = /** @class */ (function () {
             this._sharedService.put(data, path).then(function (res) {
                 _this._sharedService.loader('hide');
                 if (res.success) {
-                    _this._sharedService.showAlert('Updated Successfully', 'alert-success');
+                    var dType = _this.object.businessType == 'doctor' ? 'Doctor' : _this.object.businessType == 'dispensary' ? 'Dispensary' : 'Brand';
+                    var message = dType + ' Updated Successfully';
+                    _this._sharedService.showAlert(message, 'alert-success');
                 }
                 else {
                     _this._sharedService.showAlert(res.error.message, 'alert-danger');
@@ -237,7 +242,10 @@ var AddupdateItemComponent = /** @class */ (function () {
             this._sharedService.post(data, 'add_dispensary').then(function (res) {
                 _this._sharedService.loader('hide');
                 if (res.success) {
-                    _this._sharedService.showAlert('Created Successfully', 'alert-success');
+                    var dType = _this.object.businessType == 'doctor' ? 'Doctor' : _this.object.businessType == 'dispensary' ? 'Dispensary' : 'Brand';
+                    var message = dType + ' Created Successfully';
+                    _this._sharedService.showAlert(message, 'alert-success');
+                    _this._router.navigate(["/item-dashboard/my-menu"]);
                     _this.showMyMenu = true;
                 }
                 else {
@@ -273,7 +281,8 @@ var AddupdateItemComponent = /** @class */ (function () {
             template: __webpack_require__("../../../../../src/app/item-dashboard/addupdate-item/addupdate-item.component.html"),
             styles: [__webpack_require__("../../../../../src/app/item-dashboard/addupdate-item/addupdate-item.component.css")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__shared_services_shared_service__["a" /* SharedService */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_router__["c" /* Router */],
+            __WEBPACK_IMPORTED_MODULE_1__shared_services_shared_service__["a" /* SharedService */]])
     ], AddupdateItemComponent);
     return AddupdateItemComponent;
 }());
@@ -364,7 +373,9 @@ var EditProductComponent = /** @class */ (function () {
         var options = {
             id: this._route.snapshot.params['id']
         };
+        this._sharedService.loader('show');
         this._sharedService.queryParams('getItemProduct', options).then(function (res) {
+            _this._sharedService.loader('hide');
             if (res.success) {
                 _this.obj = res.data.key[0];
                 _this.getAllCategories();
@@ -861,7 +872,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/item-dashboard/reviews/reviews.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"spc-top\"></div>\n<!-- This is a Login Form -->\n<section class=\"dispen-dashboard\">\n\t<div class=\"container-flude\">\n\t\t<div class=\"row m-0\">\n\t\t\t<div class=\"col-sm-12\">\n\t\t\t\t<div class=\"dispen-dashboard-nav\">\n\t\t\t\t\t<ul  class=\"nav nav-pills\">\n\t\t\t\t\t\t<li><a href=\"#/item-dashboard\">{{roles == 'DR' ? 'Doctor':''}} {{roles == 'D' ? 'Store':''}} {{roles == 'B' ? 'Brand':''}} Details</a></li>\n\t\t\t\t\t\t<li><a  href=\"#/item-dashboard/my-menu\" *ngIf=\"roles == 'D' || roles == 'B'\">My Menu</a></li>\n\t\t\t\t\t\t<li class=\"active\"><a>Review</a></li>\n\t\t\t\t\t\t<li><a href=\"#/item-dashboard/account-info\">Account Info</a></li>\n\t\t\t\t\t</ul>\n\t\t\t\t</div>\n\t\t\t\t<!-- Tab content -->\n\t\t\t\t<div class=\"tab-content-wrapper clearfix\">\n\t\t\t\t\t<div class=\"active\">\n\t\t\t\t\t\t<div class=\"inn-container\">\n\t\t\t\t\t\t\t<div class=\"col-sm-6 p-o\">\n\t\t\t\t\t\t\t\t<h3 class=\"dis-dash-title\">Review</h3>\n\t\t\t\t\t        </div>\n\t\t\t\t\t        <div class=\"col-sm-6 text-right date-filter p-o\">\n\t\t\t\t\t          <div class=\"form-inline\">\n\t\t\t\t\t            <label for=\"email\">Date Filter</label>\n\t\t\t\t\t            <select class=\"form-control\" id=\"sel1\">\n\t\t\t\t\t              <option>Previous Months</option>\n\t\t\t\t\t              <option>Today</option>\n\t\t\t\t\t              <option>Last Week</option>\n\t\t\t\t\t              <option>Last Month</option>\n\t\t\t\t\t              <option>Previous Months</option>\n\t\t\t\t\t            </select>\n\t\t\t\t\t          </div>\n\t\t\t\t\t        </div>    \n\t\t\t\t\t        <div class=\"clearfix\"></div>\n\t\t\t\t\t        <div class=\"col-sm-4 p-0\">\n\t\t\t\t\t          <div class=\"inner-review-lft\">\n\t\t\t\t\t            <span class=\"riv-rat\"><i class=\"fa fa-star\" aria-hidden=\"true\"></i></span>\n\t\t\t\t\t            <span class=\"riv-num-rat\"><strong>{{average}}</strong> out of 5 stras <P>{{count}} Reviews</P></span>\n\t\t\t\t\t          </div>\n\t\t\t\t\t        </div>\n\t\t\t\t\t        <div class=\"col-sm-8 p-r\">\n\t\t\t\t\t          <div class=\"inner-review-rit\" *ngFor=\"let obj of arrayObj;let i=index\">\n\t\t\t\t\t            <div class=\"col-sm-2\">\n\t\t\t\t\t            \t<div class=\"revi-img\"><img src=\"assets/img/review-logo.png\" class=\"img-responsive\"></div>\n\t\t\t\t\t            </div>\n\t\t\t\t\t            <div class=\"col-sm-7\">\n\t\t\t\t\t              <h4 class=\"rit-main-title\">{{obj.addedBy ? obj.addedBy['username1'] ? obj.addedBy['username1'] : obj.addedBy :\"Unknown name\"}}</h4>\n\t\t\t\t\t              <span class=\"riv-rat\">\n\t\t\t\t\t                <i class=\"fa fa-star\" aria-hidden=\"true\"></i>\n\t\t\t\t\t                <i class=\"fa fa-star\" aria-hidden=\"true\"></i>\n\t\t\t\t\t                <i class=\"fa fa-star\" aria-hidden=\"true\"></i>\n\t\t\t\t\t                <i class=\"fa fa-star\" aria-hidden=\"true\"></i>\n\t\t\t\t\t                <i class=\"fa fa-star\" aria-hidden=\"true\"></i>\n\t\t\t\t\t              </span>\n\t\t\t\t\t              <span class=\"riv-rat-no\">{{obj.rating}}</span>\n\t\t\t\t\t            </div>\n\t\t\t\t\t            <div class=\"col-sm-3 text-right\">\n\t\t\t\t\t              <p class=\"month-view\">{{obj.createdAt | date:'dd/mm/yyyy'}}</p>\n\t\t\t\t\t            </div>\n\t\t\t\t\t            <div class=\"clearfix\"></div>\n\t\t\t\t\t            <div class=\"col-sm-10 col-sm-offset-2\">\n\t\t\t\t\t              <div class=\"revi-comment\">\n\t\t\t\t\t                  <h4>{{obj.name ? obj.name :\"Cody Marquez\"}}</h4>\n\t\t\t\t\t                  <p>{{obj.detail}}</p>\n\t\t\t\t\t                  <button class=\"btn btn-default pull-right\" *ngIf=\"i !== selectedIndex\" (click)=\"selectedIndex=i\" >Reply</button>\n\t\t\t\t\t              </div>\n\t\t\t\t\t              <div class=\"revi-comment\" *ngIf=\"i == selectedIndex\">\n\t\t\t\t\t                  <textarea cols=\"36\" id=\"reply\" name=\"reply\" [(ngModel)]=\"reply\"></textarea>\n\t\t\t\t\t                  <button class=\"btn btn-default pull-right\" (click)=\"send(i,obj.id)\" >send</button>\n\t\t\t\t\t              </div>\n\t\t\t\t\t            </div>\n\t\t\t\t\t          </div>\n\t\t\t\t\t        </div>\n\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n"
+module.exports = "<div class=\"spc-top\"></div>\n<!-- This is a Login Form -->\n<section class=\"dispen-dashboard\">\n\t<div class=\"container-flude\">\n\t\t<div class=\"row m-0\">\n\t\t\t<div class=\"col-sm-12\">\n\t\t\t\t<div class=\"dispen-dashboard-nav\">\n\t\t\t\t\t<ul  class=\"nav nav-pills\">\n\t\t\t\t\t\t<li><a href=\"#/item-dashboard\">{{roles == 'DR' ? 'Doctor':''}} {{roles == 'D' ? 'Store':''}} {{roles == 'B' ? 'Brand':''}} Details</a></li>\n\t\t\t\t\t\t<li><a  href=\"#/item-dashboard/my-menu\" *ngIf=\"roles == 'D' || roles == 'B'\">My Menu</a></li>\n\t\t\t\t\t\t<li class=\"active\"><a>Review</a></li>\n\t\t\t\t\t\t<li><a href=\"#/item-dashboard/account-info\">Account Info</a></li>\n\t\t\t\t\t</ul>\n\t\t\t\t</div>\n\t\t\t\t<!-- Tab content -->\n\t\t\t\t<div class=\"tab-content-wrapper clearfix\">\n\t\t\t\t\t<div class=\"active\">\n\t\t\t\t\t\t<div class=\"inn-container\">\n\t\t\t\t\t\t\t<div class=\"col-sm-6 p-o\">\n\t\t\t\t\t\t\t\t<h3 class=\"dis-dash-title\">Review</h3>\n\t\t\t\t\t        </div>\n\t\t\t\t\t        <div class=\"col-sm-6 text-right date-filter p-o\">\n\t\t\t\t\t          <div class=\"form-inline\">\n\t\t\t\t\t            <label for=\"email\">Date Filter</label>\n\t\t\t\t\t            <select class=\"form-control\" id=\"sel1\">\n\t\t\t\t\t              <option>Previous Months</option>\n\t\t\t\t\t              <option>Today</option>\n\t\t\t\t\t              <option>Last Week</option>\n\t\t\t\t\t              <option>Last Month</option>\n\t\t\t\t\t              <option>Previous Months</option>\n\t\t\t\t\t            </select>\n\t\t\t\t\t          </div>\n\t\t\t\t\t        </div>    \n\t\t\t\t\t        <div class=\"clearfix\"></div>\n\t\t\t\t\t        <div class=\"col-sm-4 p-0\">\n\t\t\t\t\t          <div class=\"inner-review-lft\">\n\t\t\t\t\t            <span class=\"riv-rat\"><i class=\"fa fa-star\" aria-hidden=\"true\"></i></span>\n\t\t\t\t\t            <span class=\"riv-num-rat\"><strong>{{average}}</strong> out of 5 stras <P>{{count}} Reviews</P></span>\n\t\t\t\t\t          </div>\n\t\t\t\t\t        </div>\n\t\t\t\t\t        <div class=\"col-sm-8 p-r\">\n\t\t\t\t\t          <div class=\"inner-review-rit\" *ngFor=\"let obj of arrayObj;let i=index\">\n\t\t\t\t\t            <div class=\"col-sm-2\">\n\t\t\t\t\t            \t<div class=\"revi-img\"><img src=\"assets/img/review-logo.png\" class=\"img-responsive\"></div>\n\t\t\t\t\t            </div>\n\t\t\t\t\t            <div class=\"col-sm-7\">\n\t\t\t\t\t              <h4 class=\"rit-main-title\">{{obj.addedBy ? obj.addedBy['username1'] ? obj.addedBy['username1'] : obj.addedBy['username'] :\"Unknown name\"}}</h4>\n\t\t\t\t\t              <span class=\"riv-rat\">\n\t\t\t\t\t                <i class=\"fa fa-star\" aria-hidden=\"true\"></i>\n\t\t\t\t\t                <i class=\"fa fa-star\" aria-hidden=\"true\"></i>\n\t\t\t\t\t                <i class=\"fa fa-star\" aria-hidden=\"true\"></i>\n\t\t\t\t\t                <i class=\"fa fa-star\" aria-hidden=\"true\"></i>\n\t\t\t\t\t                <i class=\"fa fa-star\" aria-hidden=\"true\"></i>\n\t\t\t\t\t              </span>\n\t\t\t\t\t              <span class=\"riv-rat-no\">{{obj.rating}}</span>\n\t\t\t\t\t            </div>\n\t\t\t\t\t            <div class=\"col-sm-3 text-right\">\n\t\t\t\t\t              <p class=\"month-view\">{{obj.createdAt | date:'dd/mm/yyyy'}}</p>\n\t\t\t\t\t            </div>\n\t\t\t\t\t            <div class=\"clearfix\"></div>\n\t\t\t\t\t            <div class=\"col-sm-10 col-sm-offset-2\">\n\t\t\t\t\t              <div class=\"revi-comment\">\n\t\t\t\t\t                  <h4>{{obj.name ? obj.name :\"Cody Marquez\"}}</h4>\n\t\t\t\t\t                  <p>{{obj.detail}}</p>\n\t\t\t\t\t                  <p *ngIf=\"obj.replies\">Reply: <strong>{{obj.replies}}</strong></p>\n\t\t\t\t\t                  <button class=\"btn btn-default pull-right\" *ngIf=\"!obj.replies && i !== selectedIndex\" (click)=\"selectedIndex=i\" >Reply</button>\n\t\t\t\t\t              </div>\n\t\t\t\t\t              <div class=\"revi-comment\" *ngIf=\"i == selectedIndex\">\n\t\t\t\t\t                  <textarea cols=\"36\" id=\"reply\" name=\"reply\" [(ngModel)]=\"reply\"></textarea>\n\t\t\t\t\t                  <button class=\"btn btn-default pull-right\" (click)=\"send(i,obj.id)\" >send</button>\n\t\t\t\t\t              </div>\n\t\t\t\t\t            </div>\n\t\t\t\t\t          </div>\n\t\t\t\t\t        </div>\n\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n"
 
 /***/ }),
 
@@ -914,6 +925,7 @@ var ReviewsComponent = /** @class */ (function () {
         this._sharedService.post(data, 'replies').then(function (res) {
             _this._sharedService.loader('hide');
             if (res.success) {
+                _this.arrayObj[index]['replies'] = " " + _this.reply;
                 _this.reply = '';
                 _this.selectedIndex = null;
             }

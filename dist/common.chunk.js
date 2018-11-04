@@ -97,6 +97,19 @@ var SharedService = /** @class */ (function () {
         return this.http.get(this.rootUrl + path + '?' + params.toString(), { headers: headers })
             .toPromise().then(function (response) { return response.json(); });
     };
+    SharedService.prototype.queryParamsProducts = function (path, options, categoryIds, ratingIds) {
+        if (categoryIds === void 0) { categoryIds = []; }
+        if (ratingIds === void 0) { ratingIds = []; }
+        var headers = this.getAuthorizationHeader();
+        var params = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["d" /* URLSearchParams */]();
+        for (var key in options) {
+            params.set(key, options[key]);
+        }
+        var categoryIdsArray = JSON.stringify(categoryIds);
+        var ratingIdsArray = JSON.stringify(ratingIds);
+        return this.http.get(this.rootUrl + path + '?' + params.toString() + '&categoryIds=' + categoryIdsArray + '&ratingIds=' + ratingIdsArray, { headers: headers })
+            .toPromise().then(function (response) { return response.json(); });
+    };
     SharedService.prototype.myStrains = function (search, page, count) {
         var headers = this.getAuthorizationHeader();
         return this.http.get(this.rootUrl + 'myproducts?search=' + search + '&page=' + page + "&count=" + count, { headers: headers })
@@ -1279,7 +1292,7 @@ var AbstractControlDirective = /** @class */ (function () {
  * @abstract
  */
 var ControlContainer = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(ControlContainer, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(ControlContainer, _super);
     function ControlContainer() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
@@ -2109,7 +2122,7 @@ function unimplemented() {
  * @abstract
  */
 var NgControl = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(NgControl, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(NgControl, _super);
     function NgControl() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
         /**
@@ -3449,7 +3462,7 @@ function removeDir(list, el) {
  * \@stable
  */
 var AbstractFormGroupDirective = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(AbstractFormGroupDirective, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(AbstractFormGroupDirective, _super);
     function AbstractFormGroupDirective() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
@@ -3639,7 +3652,7 @@ var ngControlStatusHost = {
  * \@stable
  */
 var NgControlStatus = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(NgControlStatus, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(NgControlStatus, _super);
     function NgControlStatus(cd) {
         return _super.call(this, cd) || this;
     }
@@ -3659,7 +3672,7 @@ var NgControlStatus = /** @class */ (function (_super) {
  * \@stable
  */
 var NgControlStatusGroup = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(NgControlStatusGroup, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(NgControlStatusGroup, _super);
     function NgControlStatusGroup(cd) {
         return _super.call(this, cd) || this;
     }
@@ -4788,7 +4801,7 @@ var AbstractControl = /** @class */ (function () {
  * \@stable
  */
 var FormControl = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(FormControl, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(FormControl, _super);
     function FormControl(formState, validatorOrOpts, asyncValidator) {
         if (formState === void 0) { formState = null; }
         var _this = _super.call(this, coerceToValidator(validatorOrOpts), coerceToAsyncValidator(asyncValidator, validatorOrOpts)) || this;
@@ -5212,7 +5225,7 @@ var FormControl = /** @class */ (function (_super) {
  * \@stable
  */
 var FormGroup = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(FormGroup, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(FormGroup, _super);
     function FormGroup(controls, validatorOrOpts, asyncValidator) {
         var _this = _super.call(this, coerceToValidator(validatorOrOpts), coerceToAsyncValidator(asyncValidator, validatorOrOpts)) || this;
         _this.controls = controls;
@@ -5878,7 +5891,7 @@ var FormGroup = /** @class */ (function (_super) {
  * \@stable
  */
 var FormArray = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(FormArray, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(FormArray, _super);
     function FormArray(controls, validatorOrOpts, asyncValidator) {
         var _this = _super.call(this, coerceToValidator(validatorOrOpts), coerceToAsyncValidator(asyncValidator, validatorOrOpts)) || this;
         _this.controls = controls;
@@ -6480,7 +6493,7 @@ var resolvedPromise = Promise.resolve(null);
  *  \@stable
  */
 var NgForm = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(NgForm, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(NgForm, _super);
     function NgForm(validators, asyncValidators) {
         var _this = _super.call(this) || this;
         _this.submitted = false;
@@ -6837,7 +6850,7 @@ var modelGroupProvider = {
  * \@stable
  */
 var NgModelGroup = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(NgModelGroup, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(NgModelGroup, _super);
     function NgModelGroup(parent, validators, asyncValidators) {
         var _this = _super.call(this) || this;
         _this._parent = parent;
@@ -6966,7 +6979,7 @@ var resolvedPromise$1 = Promise.resolve(null);
  *  \@stable
  */
 var NgModel = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(NgModel, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(NgModel, _super);
     function NgModel(parent, validators, asyncValidators, valueAccessors) {
         var _this = _super.call(this) || this;
         _this.control = new FormControl();
@@ -7324,7 +7337,7 @@ var formControlBinding$1 = {
  *  \@stable
  */
 var FormControlDirective = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(FormControlDirective, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(FormControlDirective, _super);
     function FormControlDirective(validators, asyncValidators, valueAccessors) {
         var _this = _super.call(this) || this;
         _this.update = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["EventEmitter"]();
@@ -7490,7 +7503,7 @@ var formDirectiveProvider$1 = {
  *  \@stable
  */
 var FormGroupDirective = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(FormGroupDirective, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(FormGroupDirective, _super);
     function FormGroupDirective(_validators, _asyncValidators) {
         var _this = _super.call(this) || this;
         _this._validators = _validators;
@@ -7822,7 +7835,7 @@ var formGroupNameProvider = {
  * \@stable
  */
 var FormGroupName = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(FormGroupName, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(FormGroupName, _super);
     function FormGroupName(parent, validators, asyncValidators) {
         var _this = _super.call(this) || this;
         _this._parent = parent;
@@ -7910,7 +7923,7 @@ var formArrayNameProvider = {
  * \@stable
  */
 var FormArrayName = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(FormArrayName, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(FormArrayName, _super);
     function FormArrayName(parent, validators, asyncValidators) {
         var _this = _super.call(this) || this;
         _this._parent = parent;
@@ -8084,7 +8097,7 @@ var controlNameBinding = {
  *  \@stable
  */
 var FormControlName = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(FormControlName, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(FormControlName, _super);
     function FormControlName(parent, validators, asyncValidators, valueAccessors) {
         var _this = _super.call(this) || this;
         _this._added = false;
@@ -8352,7 +8365,7 @@ var RequiredValidator = /** @class */ (function () {
  * \@experimental
  */
 var CheckboxRequiredValidator = /** @class */ (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __extends */])(CheckboxRequiredValidator, _super);
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["c" /* __extends */])(CheckboxRequiredValidator, _super);
     function CheckboxRequiredValidator() {
         return _super !== null && _super.apply(this, arguments) || this;
     }

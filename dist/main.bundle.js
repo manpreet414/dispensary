@@ -26,8 +26,8 @@ var map = {
 	],
 	"app/pages/pages.module": [
 		"../../../../../src/app/pages/pages.module.ts",
-		"common",
-		"pages.module"
+		"pages.module",
+		"common"
 	],
 	"app/theme/theme.module": [
 		"../../../../../src/app/theme/theme.module.ts",
