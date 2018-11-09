@@ -150,6 +150,7 @@ var LoginSignupComponent = /** @class */ (function () {
             email: '',
             password: '',
             username: '',
+            domain: "web",
             roles: 'U'
         };
         this.userType = 'endUser';
@@ -209,6 +210,7 @@ var LoginSignupComponent = /** @class */ (function () {
                     username: '',
                     email: '',
                     password: '',
+                    domain: "web",
                     roles: 'U'
                 };
             }

@@ -231,6 +231,26 @@ a.navbar-brand>img.img-responsive {
     border: 1px solid #fff;
 }
 
+
+.banner_porduct {
+    background: url(../img/product_listing_bg.jpeg) no-repeat center center / cover;
+    min-height: 348px;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    position: relative;
+}
+.banner_porduct:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+
 .banner {
     background: url(../img/banner.png) no-repeat center center / cover;
     min-height: 400px;
@@ -2254,6 +2274,9 @@ p.str-pro-rat>span {
 }
 @media (max-width:992px){
     .banner {
+        min-height: 400px;
+    }
+    .banner_porduct {
         min-height: 400px;
     }
     h1 {
