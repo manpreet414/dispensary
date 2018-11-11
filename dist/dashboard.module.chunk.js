@@ -672,7 +672,7 @@ var MyStrainsReviewComponent = /** @class */ (function () {
             if (res.success) {
                 _this.object = {
                     product_id: '',
-                    type: 'dispensary',
+                    type: 'product',
                     rating: null,
                     detail: ''
                 };

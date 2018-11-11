@@ -225,6 +225,7 @@ var ItemDetailComponent = /** @class */ (function () {
         var _this = this;
         if (this._sharedService.isLogin()) {
             this._sharedService.loader('show');
+            this.review['type'] = this.object['businessType'];
             this._sharedService.post(this.review, 'reviews').then(function (res) {
                 _this._sharedService.loader('hide');
                 if (res.success) {
@@ -232,7 +233,7 @@ var ItemDetailComponent = /** @class */ (function () {
                     _this.fetchReviews();
                     _this.review = {
                         item_id: _this.object['id'],
-                        type: 'dispensary',
+                        type: _this.object['businessType'],
                         rating: null,
                         detail: ''
                     };
