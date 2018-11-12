@@ -267,6 +267,89 @@ var LayoutComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "../../../../../src/app/theme/subscribe/subscribe.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".input-box {\n\tbackground: gray;\n    border: gray;\n    color:white;\n}", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/theme/subscribe/subscribe.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<ngx-spinner></ngx-spinner>\n<!-- This is a Banner -->\n<ngx-flash-messages></ngx-flash-messages>\n<div class=\"banner banner-lending-pg\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-sm-12 text-center\">\n\t\t\t\t<h1><img src=\"assets/img/landing-bg.png\" class=\"tit-bg-img\"> helping canadians <br> find their buds.</h1>\n\t\t\t\t<h4>website and app coming soon!</h4>\n\t\t\t\t<p>want to know when we launch? <br>subscribe by leaving your email below</p>\n\t\t\t\t<div class=\"location-search search-container\">\n\t\t\t\t    <form >\n\t\t\t    \t  <div class=\"search-form-group\">\n\t\t\t\t\t\t<input type=\"text\" id=\"email\" [(ngModel)]=\"email\" class=\"form-control\" placeholder=\"\" name=\"search\">\n\t\t\t    \t  </div>\n\t\t\t\t      <button type=\"submit\" (click)=\"subscribe()\" class=\"btn btn-success cus-btn\">Notify Me</button>\n\t\t\t\t    </form>\n\t\t\t  </div>\n\t\t\t</div>\n\t\t\t<div class=\"col-sm-12 text-right admin-instaleaf\">\n\t\t\t\t<h6>Contact- admin@instaleaf.cs</h6>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t\n</div><!-- <div class=\"banner banner-lending-pg\" style=\"height: 675px !important;\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-sm-12 text-center\">\n\t\t\t\t<h1><img src=\"assets/img/landing-bg.png\" class=\"tit-bg-img\"> helping canadians <br> find their buds.</h1>\n\t\t\t\t<h4>website and app coming soon!</h4>\n\t\t\t\t<p><i><b>want to know when we launch? <br>subscribe by leaving your email below</b></i></p>\n\t\t\t\t<div class=\"row\">\n\t\t\t\t\t<div class=\"col-sm-offset-4 col-sm-3\">\n\t\t\t\t\t\t<input type=\"email\" id=\"email\" [(ngModel)]='email' class=\"form-control input-box\" placeholder=\"\" name=\"search\">\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"col-sm-2\">\n\t\t\t\t      <span type=\"submit\" autofocus=\"\" style=\"color:gray;cursor: pointer;\" (click)='subscribe()'><b>Notify Me</b></span>\n\t\t\t\t\t</div>\n\t\t\t  </div>\n\t\t\t  <div class=\"row\">\n\t\t\t  \t\t<div class=\"col-sm-12\">&nbsp;</div>\n\t\t\t  \t\t<div class=\"col-sm-12\">&nbsp;</div>\n\t\t\t  \t\t<div class=\"col-sm-12\">&nbsp;</div>\n\t\t\t  \t\t<div class=\"col-sm-12\">&nbsp;</div>\n\t\t\t  \t\t<div class=\"col-sm-offset-5 col-sm-7 align-right text-right\">\n\t\t\t  \t\t\t<span style=\"color: #afacac;font-size: 28px\"><i>Contact: admin@instaleaf.ca</i></span>\n\t\t\t  \t\t</div>\n\t\t\t  </div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div> -->"
+
+/***/ }),
+
+/***/ "../../../../../src/app/theme/subscribe/subscribe.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SubscribeComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_services_shared_service__ = __webpack_require__("../../../../../src/app/shared/services/shared.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var SubscribeComponent = /** @class */ (function () {
+    function SubscribeComponent(_sharedService) {
+        this._sharedService = _sharedService;
+    }
+    SubscribeComponent.prototype.ngOnInit = function () {
+    };
+    SubscribeComponent.prototype.subscribe = function () {
+        var _this = this;
+        var data = { email: this.email };
+        if (!this.email || ((this.email.indexOf('@') == -1) && (this.email.indexOf('.') == -1))) {
+            this._sharedService.showAlert('Please enter valid email id.', 'alert-danger');
+            return;
+        }
+        this._sharedService.loader('show');
+        this._sharedService.post(data, 'subscription').then(function (res) {
+            _this._sharedService.loader('hide');
+            _this.email = '';
+            if (res.success) {
+                _this._sharedService.showAlert(res.data.message, 'alert-success');
+            }
+            else {
+                _this._sharedService.showAlert(res.error.message, 'alert-danger');
+            }
+        }, function (error) { });
+    };
+    SubscribeComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-subscribe',
+            template: __webpack_require__("../../../../../src/app/theme/subscribe/subscribe.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/theme/subscribe/subscribe.component.css")]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__shared_services_shared_service__["a" /* SharedService */]])
+    ], SubscribeComponent);
+    return SubscribeComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "../../../../../src/app/theme/theme-routing.module.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -275,12 +358,14 @@ var LayoutComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__layout_layout_component__ = __webpack_require__("../../../../../src/app/theme/layout/layout.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__subscribe_subscribe_component__ = __webpack_require__("../../../../../src/app/theme/subscribe/subscribe.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -310,6 +395,10 @@ var routes = [
                 loadChildren: 'app/pages/pages.module#PagesModule'
             }
         ]
+    },
+    {
+        path: 'subscribe',
+        component: __WEBPACK_IMPORTED_MODULE_3__subscribe_subscribe_component__["a" /* SubscribeComponent */]
     }
 ];
 var ThemeRoutingModule = /** @class */ (function () {
@@ -343,12 +432,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__layout_layout_component__ = __webpack_require__("../../../../../src/app/theme/layout/layout.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__shared_shared_module__ = __webpack_require__("../../../../../src/app/shared/shared.module.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_ngx_flash_messages__ = __webpack_require__("../../../../ngx-flash-messages/lib-dist/flash-messages.module.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__subscribe_subscribe_component__ = __webpack_require__("../../../../../src/app/theme/subscribe/subscribe.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_ngx_spinner__ = __webpack_require__("../../../../ngx-spinner/ngx-spinner.umd.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_ngx_spinner___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_ngx_spinner__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -368,9 +462,10 @@ var ThemeModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
                 __WEBPACK_IMPORTED_MODULE_7__shared_shared_module__["a" /* SharedModule */],
                 __WEBPACK_IMPORTED_MODULE_3__theme_routing_module__["a" /* ThemeRoutingModule */],
-                __WEBPACK_IMPORTED_MODULE_8_ngx_flash_messages__["a" /* FlashMessagesModule */]
+                __WEBPACK_IMPORTED_MODULE_8_ngx_flash_messages__["a" /* FlashMessagesModule */],
+                __WEBPACK_IMPORTED_MODULE_10_ngx_spinner__["NgxSpinnerModule"]
             ],
-            declarations: [__WEBPACK_IMPORTED_MODULE_4__header_header_component__["a" /* HeaderComponent */], __WEBPACK_IMPORTED_MODULE_5__footer_footer_component__["a" /* FooterComponent */], __WEBPACK_IMPORTED_MODULE_6__layout_layout_component__["a" /* LayoutComponent */]]
+            declarations: [__WEBPACK_IMPORTED_MODULE_4__header_header_component__["a" /* HeaderComponent */], __WEBPACK_IMPORTED_MODULE_5__footer_footer_component__["a" /* FooterComponent */], __WEBPACK_IMPORTED_MODULE_6__layout_layout_component__["a" /* LayoutComponent */], __WEBPACK_IMPORTED_MODULE_9__subscribe_subscribe_component__["a" /* SubscribeComponent */]]
         })
     ], ThemeModule);
     return ThemeModule;

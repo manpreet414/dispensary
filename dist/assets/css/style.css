@@ -2245,6 +2245,68 @@ p.str-pro-rat>span {
 .seach-list-page h2>img {
     margin-right:10px;
 }
+
+/*
+################
+               Landing Page
+################
+*/
+.banner-lending-pg{
+    background: url(../img/landing-bg.jpg) no-repeat center center / cover;
+    min-height: 100vh;
+}
+.banner-lending-pg h1 {
+    text-transform: capitalize;
+    font-size: 40px;
+    line-height: 50px;
+}
+.banner-lending-pg h1>img.tit-bg-img {
+    position: absolute;
+    left: 31%;
+    top: -53px;
+    width: 85px;
+}
+.banner-lending-pg h4 {
+    color: #fff;
+    font-weight: 500;
+}
+.banner-lending-pg  p {
+    color: #e0dede;
+    font-size: 30px;
+    line-height: 32px;
+    font-weight: 500;
+}
+.banner-lending-pg .search-container {
+    width: 600px;
+    padding: 15px;
+    margin: 20px auto;
+}
+.banner-lending-pg .search-form-group {
+    position: relative;
+    display: inline-block;
+    width: 74%;
+}
+.banner-lending-pg .search-container input.form-control {
+    display: inline-block;
+    width: 100%;
+}
+.banner-lending-pg .search-container button.cus-btn {
+    margin: 0;
+    margin-left: -4px;
+}
+.banner-lending-pg h6 {
+    color: #fff;
+    margin-bottom: 0;
+    font-size: 25px;
+    text-transform: lowercase;
+}
+.admin-instaleaf {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+}
+/*
+################
 /*
 ################
                Start Media
