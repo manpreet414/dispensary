@@ -239,6 +239,7 @@ var AddupdateItemComponent = /** @class */ (function () {
             }, function (error) { });
         }
         else {
+            data['businessType'] = this.roles == 'B' ? 'brand' : this.roles == 'D' ? 'dispensary' : 'doctor';
             this._sharedService.post(data, 'add_dispensary').then(function (res) {
                 _this._sharedService.loader('hide');
                 if (res.success) {

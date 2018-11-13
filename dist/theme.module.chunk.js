@@ -371,7 +371,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 var routes = [
     {
-        path: '',
+        path: 'site',
         component: __WEBPACK_IMPORTED_MODULE_2__layout_layout_component__["a" /* LayoutComponent */],
         children: [
             {
@@ -397,7 +397,7 @@ var routes = [
         ]
     },
     {
-        path: 'subscribe',
+        path: '',
         component: __WEBPACK_IMPORTED_MODULE_3__subscribe_subscribe_component__["a" /* SubscribeComponent */]
     }
 ];

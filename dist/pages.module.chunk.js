@@ -88,6 +88,7 @@ var ItemDetailComponent = /** @class */ (function () {
         });
     }
     ItemDetailComponent.prototype.ngOnInit = function () {
+        window.scrollTo(500, 0);
         if (this._sharedService.isLogin()) {
             this.favorate();
             this.loginID = this._sharedService.loginID();
